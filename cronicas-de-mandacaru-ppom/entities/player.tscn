@@ -22,15 +22,15 @@
 [ext_resource type="Texture2D" uid="uid://dt72bcl46wtp7" path="res://Sprites/HOBBIT/HIT/Hobbit - hit2.png" id="16_1sc42"]
 [ext_resource type="Texture2D" uid="uid://dky34yul6dd5v" path="res://Sprites/HOBBIT/HIT/Hobbit - hit3.png" id="17_0t50q"]
 [ext_resource type="Texture2D" uid="uid://c3sexhtwhfmxv" path="res://Sprites/HOBBIT/HIT/Hobbit - hit4.png" id="18_5qcl2"]
-[ext_resource type="Texture2D" uid="uid://u1u1vslivou1" path="res://Tamanduá/Parado/parado1.png" id="29_b338v"]
-[ext_resource type="Texture2D" uid="uid://ccr4ms3yohvjf" path="res://Tamanduá/Parado/parado2.png" id="30_i1mej"]
-[ext_resource type="Texture2D" uid="uid://bjqo7mkmjmgjc" path="res://Tamanduá/Parado/parado3.png" id="31_e45uk"]
-[ext_resource type="Texture2D" uid="uid://b74rwa160kqfp" path="res://Tamanduá/correndo/correndo1.png" id="36_ud54e"]
-[ext_resource type="Texture2D" uid="uid://bky8vs8pr3265" path="res://Tamanduá/correndo/correndo2.png" id="37_iudwg"]
-[ext_resource type="Texture2D" uid="uid://7mbqct30s6ac" path="res://Tamanduá/correndo/correndo3.png" id="38_rw12f"]
-[ext_resource type="Texture2D" uid="uid://c2wif3antxbww" path="res://Tamanduá/correndo/correndo4.png" id="39_is18v"]
-[ext_resource type="Texture2D" uid="uid://ccsgmeuvlh3f3" path="res://Tamanduá/correndo/correndo5.png" id="40_bp1bk"]
-[ext_resource type="Texture2D" uid="uid://cofn4dbu1yxgq" path="res://Tamanduá/correndo/correndo6.png" id="41_x2tvf"]
+[ext_resource type="Texture2D" uid="uid://u1u1vslivou1" path="res://Sprites/Tamanduá/Parado/parado1.png" id="29_b338v"]
+[ext_resource type="Texture2D" uid="uid://ccr4ms3yohvjf" path="res://Sprites/Tamanduá/Parado/parado2.png" id="30_i1mej"]
+[ext_resource type="Texture2D" uid="uid://bjqo7mkmjmgjc" path="res://Sprites/Tamanduá/Parado/parado3.png" id="31_e45uk"]
+[ext_resource type="Texture2D" uid="uid://b74rwa160kqfp" path="res://Sprites/Tamanduá/correndo/correndo1.png" id="36_ud54e"]
+[ext_resource type="Texture2D" uid="uid://bky8vs8pr3265" path="res://Sprites/Tamanduá/correndo/correndo2.png" id="37_iudwg"]
+[ext_resource type="Texture2D" uid="uid://7mbqct30s6ac" path="res://Sprites/Tamanduá/correndo/correndo3.png" id="38_rw12f"]
+[ext_resource type="Texture2D" uid="uid://c2wif3antxbww" path="res://Sprites/Tamanduá/correndo/correndo4.png" id="39_is18v"]
+[ext_resource type="Texture2D" uid="uid://ccsgmeuvlh3f3" path="res://Sprites/Tamanduá/correndo/correndo5.png" id="40_bp1bk"]
+[ext_resource type="Texture2D" uid="uid://cofn4dbu1yxgq" path="res://Sprites/Tamanduá/correndo/correndo6.png" id="41_x2tvf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_is18v"]
 atlas = ExtResource("4_sn2x3")
@@ -250,7 +250,7 @@ z_index = 2
 position = Vector2(0, -13)
 scale = Vector2(1.1692972, 1.0045136)
 sprite_frames = SubResource("SpriteFrames_i623q")
-animation = &"walk"
+animation = &"jump"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
