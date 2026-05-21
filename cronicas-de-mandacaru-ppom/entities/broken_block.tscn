@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://cqhn0t2uo3cif"]
 
-[ext_resource type="Texture2D" uid="uid://tvp76glul5yf" path="res://Sprites/Seasonal Tilesets/5 - Misc. universal tiles/Blocks (16 x 16).png" id="1_bypwj"]
+[ext_resource type="Texture2D" uid="uid://tvp76glul5yf" path="res://Sprites/Seasonal Tilesets/4 - Misc. universal tiles/Blocks (16 x 16).png" id="1_bypwj"]
 [ext_resource type="Script" uid="uid://cmxvjjur6gmdi" path="res://Script/broken_block.gd" id="1_e12t1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e12t1"]
