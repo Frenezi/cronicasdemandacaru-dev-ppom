@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://gsyiah4uhwmy"]
+[gd_scene load_steps=18 format=4 uid="uid://lp8yjd0c1fti"]
 
 [ext_resource type="PackedScene" uid="uid://dtn1kb4yyw6ko" path="res://Scene/transition.tscn" id="1_vbnln"]
 [ext_resource type="PackedScene" uid="uid://bf72x7xnrbxik" path="res://entities/camera.tscn" id="1_vi8c3"]
@@ -14,7 +14,6 @@
 [ext_resource type="Texture2D" uid="uid://csibawuodvfde" path="res://Sprites/Seasonal Tilesets/3 - Tropics/Background parts/distant-water.png" id="10_xugpm"]
 [ext_resource type="TileSet" uid="uid://d0oodp0vad5bf" path="res://Tiles/underwater.tres" id="13_xugpm"]
 [ext_resource type="PackedScene" uid="uid://dsov8hguv4h6e" path="res://entities/moving_platform.tscn" id="15_c4p3f"]
-[ext_resource type="PackedScene" uid="uid://c512w6vss5snx" path="res://Scene/pause_menu.tscn" id="15_ymkgh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vbnln"]
 size = Vector2(20, 175)
@@ -39,7 +38,6 @@ size = Vector2(20, 247)
 [node name="Tropic" type="Node2D"]
 
 [node name="Level End" parent="." instance=ExtResource("10_prgpd")]
-next_scene = "res://Scene/forest.tscn"
 
 [node name="CollisionShape2D" parent="Level End" index="0"]
 position = Vector2(567, 88.5)
@@ -169,9 +167,6 @@ time = 2
 
 [node name="Target" parent="moving_platform2" index="1"]
 position = Vector2(-1.9646912, -124.42592)
-
-[node name="Pause_menu" parent="." instance=ExtResource("15_ymkgh")]
-visible = false
 
 [editable path="Level End"]
 [editable path="Transition"]

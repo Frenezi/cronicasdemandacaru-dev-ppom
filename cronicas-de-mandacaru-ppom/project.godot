@@ -10,9 +10,10 @@ config_version=5
 
 [application]
 
-config/name="Cronicas de Mandacaru PPOM - FORK"
+config/name="Cronicas de Mandacaru PPOM - FORK - BRUNO - OFICIAL"
 run/main_scene="uid://ceurjiyfeljuy"
 config/features=PackedStringArray("4.5", "Mobile")
+config/icon="res://icon.svg"
 
 [autoload]
 
@@ -40,10 +41,6 @@ water=""
 button=""
 items=""
 player_bullet=""
-
-[gui]
-
-theme/custom_font="uid://dy33u1ryiv0sk"
 
 [input]
 

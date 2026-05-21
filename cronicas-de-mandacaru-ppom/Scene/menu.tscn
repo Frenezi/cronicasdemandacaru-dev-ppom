@@ -1,14 +1,18 @@
-[gd_scene load_steps=77 format=3 uid="uid://ceurjiyfeljuy"]
+[gd_scene load_steps=72 format=3 uid="uid://ceurjiyfeljuy"]
 
 [ext_resource type="Script" uid="uid://bncnklakyl3hv" path="res://Script/menu.gd" id="1_eas8t"]
+[ext_resource type="Texture2D" uid="uid://k261ll7fhum8" path="res://Sprites/BACKGROUNDS/ChatGPT Image 19 de mai. de 2026, 16_23_03.png" id="2_jsa40"]
 [ext_resource type="FontFile" uid="uid://cg7nmsrpxuvmx" path="res://fonts/determination.ttf" id="2_u2k45"]
 [ext_resource type="Texture2D" uid="uid://b00pn8jsjtg3u" path="res://Sprites/HOBBIT/DEATH/Hobbit - death1.png" id="14_5t1yb"]
 [ext_resource type="Texture2D" uid="uid://b35pqsf2cmef0" path="res://Sprites/HOBBIT/DEATH/Hobbit - death2.png" id="15_f8ahi"]
 [ext_resource type="Texture2D" uid="uid://b32f4oxptmwgf" path="res://Sprites/HOBBIT/DEATH/Hobbit - death3.png" id="16_68jqx"]
 [ext_resource type="Texture2D" uid="uid://we42kbrps3u7" path="res://Sprites/HOBBIT/DEATH/Hobbit - death4.png" id="17_fvilk"]
 [ext_resource type="Texture2D" uid="uid://2ukwlp15qhy0" path="res://Sprites/HOBBIT/DEATH/Hobbit - death5.png" id="18_pban3"]
+[ext_resource type="Texture2D" uid="uid://u1u1vslivou1" path="res://Tamanduá/Parado/parado1.png" id="19_c36xq"]
 [ext_resource type="Texture2D" uid="uid://byiogqph0y8p6" path="res://Sprites/HOBBIT/DEATH/Hobbit - death6.png" id="19_ebnbq"]
 [ext_resource type="Texture2D" uid="uid://qacyw62g8rjj" path="res://Sprites/HOBBIT/DEATH/Hobbit - death7.png" id="20_bgqus"]
+[ext_resource type="Texture2D" uid="uid://ccr4ms3yohvjf" path="res://Tamanduá/Parado/parado2.png" id="20_jsa40"]
+[ext_resource type="Texture2D" uid="uid://bjqo7mkmjmgjc" path="res://Tamanduá/Parado/parado3.png" id="21_8rqvv"]
 [ext_resource type="Texture2D" uid="uid://b3n1gxn6d364" path="res://Sprites/HOBBIT/DEATH/Hobbit - death8.png" id="21_o8slv"]
 [ext_resource type="Texture2D" uid="uid://de86jrvd6v3de" path="res://Sprites/HOBBIT/DEATH/Hobbit - death9.png" id="22_83mb4"]
 [ext_resource type="Texture2D" uid="uid://cpib12ngbqva0" path="res://Sprites/HOBBIT/DEATH/Hobbit - death10.png" id="23_s34pe"]
@@ -18,10 +22,6 @@
 [ext_resource type="Texture2D" uid="uid://dt72bcl46wtp7" path="res://Sprites/HOBBIT/HIT/Hobbit - hit2.png" id="27_5yfru"]
 [ext_resource type="Texture2D" uid="uid://dky34yul6dd5v" path="res://Sprites/HOBBIT/HIT/Hobbit - hit3.png" id="28_cp3up"]
 [ext_resource type="Texture2D" uid="uid://c3sexhtwhfmxv" path="res://Sprites/HOBBIT/HIT/Hobbit - hit4.png" id="29_ahslo"]
-[ext_resource type="Texture2D" uid="uid://f5sj82mb2l7" path="res://Sprites/HOBBIT/IDLE/Hobbit - Idle1.png" id="30_2fib3"]
-[ext_resource type="Texture2D" uid="uid://c121ejosjjsnn" path="res://Sprites/HOBBIT/IDLE/Hobbit - Idle2.png" id="31_duc8a"]
-[ext_resource type="Texture2D" uid="uid://cpmmi8kuw4utu" path="res://Sprites/HOBBIT/IDLE/Hobbit - Idle3.png" id="32_r6jqs"]
-[ext_resource type="Texture2D" uid="uid://iuqj3sakpuw5" path="res://Sprites/HOBBIT/IDLE/Hobbit - Idle4.png" id="33_n5ife"]
 [ext_resource type="Texture2D" uid="uid://llh48b3mt7n2" path="res://Sprites/HOBBIT/JUMP/Hobbit - jumpt1.png" id="34_uwt1r"]
 [ext_resource type="Texture2D" uid="uid://cmoogcw38te8r" path="res://Sprites/HOBBIT/JUMP/Hobbit - jumpt2.png" id="35_61olt"]
 [ext_resource type="Texture2D" uid="uid://db1anhrm5jp5v" path="res://Sprites/HOBBIT/JUMP/Hobbit - jumpt3.png" id="36_bqmv8"]
@@ -36,8 +36,6 @@
 [ext_resource type="Texture2D" uid="uid://df4btf0vuy234" path="res://Sprites/HOBBIT/RUN/Hobbit - run8.png" id="45_wteef"]
 [ext_resource type="Texture2D" uid="uid://bsv7imj7duqgd" path="res://Sprites/HOBBIT/RUN/Hobbit - run9.png" id="46_fvppf"]
 [ext_resource type="Texture2D" uid="uid://dv08g3p12u24g" path="res://Sprites/HOBBIT/RUN/Hobbit - run10.png" id="47_sw85d"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tduxa"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7x646"]
 
@@ -107,22 +105,6 @@ region = Rect2(0, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hmnes"]
 atlas = ExtResource("29_ahslo")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_x08pd"]
-atlas = ExtResource("30_2fib3")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rcwxb"]
-atlas = ExtResource("31_duc8a")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_d2i2q"]
-atlas = ExtResource("32_r6jqs")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_mdqif"]
-atlas = ExtResource("33_n5ife")
 region = Rect2(0, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e45uk"]
@@ -252,16 +234,13 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_x08pd")
+"texture": ExtResource("19_c36xq")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_rcwxb")
+"texture": ExtResource("20_jsa40")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_d2i2q")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_mdqif")
+"texture": ExtResource("21_8rqvv")
 }],
 "loop": true,
 "name": &"idle",
@@ -332,44 +311,16 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_eas8t")
 
-[node name="MadeBy" type="ColorRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 1
-color = Color(0, 0, 0, 1)
-
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -73.0
-offset_top = -22.0
-offset_right = 73.0
-grow_horizontal = 2
-grow_vertical = 0
-mouse_filter = 0
-theme_override_constants/separation = 0
-alignment = 1
-
-[node name="Label" type="Label" parent="HBoxContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("2_u2k45")
-text = "Feito por: "
-
-[node name="Ashin" type="Button" parent="HBoxContainer" groups=["button"]]
-modulate = Color(0.4214608, 0.9999997, 0.2908442, 1)
-layout_mode = 2
-theme_override_fonts/font = ExtResource("2_u2k45")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_tduxa")
-text = "Bruno e David!"
-flat = true
+texture = ExtResource("2_jsa40")
+expand_mode = 3
+stretch_mode = 6
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -392,7 +343,7 @@ size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0.44, 0.68266666, 1, 1)
 theme_override_fonts/font = ExtResource("2_u2k45")
 theme_override_font_sizes/font_size = 28
-text = "PIXEL CODE"
+text = "Cronicas de Mandacaru"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
@@ -430,8 +381,8 @@ flat = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="VBoxContainer/HBoxContainer/VBoxContainer/Sair"]
 z_index = 2
-position = Vector2(0, -3.9999998)
-scale = Vector2(1.1692972, 1.0045136)
+position = Vector2(-68.5, 12)
+scale = Vector2(1.6, 1.375)
 sprite_frames = SubResource("SpriteFrames_fwkbm")
-animation = &"dead"
+animation = &"idle"
 autoplay = "idle"

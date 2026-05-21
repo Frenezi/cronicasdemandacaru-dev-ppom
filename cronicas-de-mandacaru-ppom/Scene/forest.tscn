@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=4 uid="uid://bu3l0hb0whjoo"]
+[gd_scene load_steps=4 format=4 uid="uid://bu3l0hb0whjoo"]
 
 [ext_resource type="PackedScene" uid="uid://tsvnbubb6bg4" path="res://entities/player.tscn" id="1_4jv7b"]
 [ext_resource type="TileSet" uid="uid://dk1qfi3hmp7p8" path="res://Tiles/terrain.tres" id="2_03iqk"]
 [ext_resource type="TileSet" uid="uid://bu2o7rwp824ui" path="res://Tiles/decoration.tres" id="3_ihreq"]
-[ext_resource type="PackedScene" uid="uid://c512w6vss5snx" path="res://Scene/pause_menu.tscn" id="4_wxqtn"]
 
 [node name="Game" type="Node2D"]
 
@@ -19,6 +18,3 @@ tile_set = ExtResource("2_03iqk")
 [node name="Decoration" type="TileMapLayer" parent="Tiles"]
 tile_map_data = PackedByteArray("AAAEAAgAAAABAAEAAAALAAEAAAABAAEAAAAPAP//AAAJAAEAAAAdAAgAAAABAAEAAAAgAAcAAwAAAAAAAAAVAAgAAAABAAEAAAAWAAgAAAAJAAEAAAAYAAgAAAAFAAEAAAAZAAgAAAAFAAEAAAA=")
 tile_set = ExtResource("3_ihreq")
-
-[node name="Pause_menu" parent="." instance=ExtResource("4_wxqtn")]
-visible = false

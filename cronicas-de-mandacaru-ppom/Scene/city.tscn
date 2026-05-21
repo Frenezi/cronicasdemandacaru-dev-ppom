@@ -93,7 +93,7 @@ visible = true
 
 [node name="Area2D" parent="." instance=ExtResource("4_oiny3")]
 position = Vector2(165.52332, 176.98816)
-puzzle_id = "notebook_2"
+puzzle_id = "notebook_1"
 
 [node name="Sprite2D" parent="Area2D" index="0"]
 position = Vector2(-0.52331537, 5.011837)

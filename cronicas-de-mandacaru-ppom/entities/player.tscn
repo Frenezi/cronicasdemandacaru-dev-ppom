@@ -232,8 +232,8 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b0kkn"]
-height = 24.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d2i2q"]
+size = Vector2(20, 28)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6nm46"]
 size = Vector2(14, 18)
@@ -250,13 +250,13 @@ z_index = 2
 position = Vector2(0, -13)
 scale = Vector2(1.1692972, 1.0045136)
 sprite_frames = SubResource("SpriteFrames_i623q")
-animation = &"dead"
+animation = &"walk"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 z_index = 2
-position = Vector2(0, -9)
-shape = SubResource("CapsuleShape2D_b0kkn")
+position = Vector2(1, -11)
+shape = SubResource("RectangleShape2D_d2i2q")
 
 [node name="HITBOX" type="Area2D" parent="."]
 collision_layer = 2
