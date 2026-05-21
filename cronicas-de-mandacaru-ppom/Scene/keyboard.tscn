@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://f7xpr004yul5"]
+[gd_scene load_steps=14 format=3 uid="uid://b6hdedo22ii8i"]
 
 [ext_resource type="Texture2D" uid="uid://be5ngfr2eudc6" path="res://Sprites/Teclado/Teclado.png" id="1_f851v"]
 [ext_resource type="Texture2D" uid="uid://l4ucwjyxpb2t" path="res://Sprites/Teclado/A.png" id="2_smnae"]
