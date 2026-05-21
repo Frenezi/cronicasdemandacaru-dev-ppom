@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://b30oc6yog2jb6"]
+[gd_scene load_steps=13 format=4 uid="uid://b30oc6yog2jb6"]
 
 [ext_resource type="Texture2D" uid="uid://bpkawpipra020" path="res://Sprites/Seasonal Tilesets/background 2/1.png" id="1_ng2j2"]
 [ext_resource type="Texture2D" uid="uid://dl2ogim8qwhip" path="res://Sprites/Seasonal Tilesets/background 2/2.png" id="2_880uq"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dlnk05ev4gpji" path="res://Sprites/Seasonal Tilesets/background 2/6.png" id="6_ydejm"]
 [ext_resource type="TileSet" uid="uid://dk1qfi3hmp7p8" path="res://Tiles/terrain.tres" id="7_mhum0"]
 [ext_resource type="PackedScene" uid="uid://cw0i3lly6kgjh" path="res://entities/level_end.tscn" id="9_oiny3"]
+[ext_resource type="PackedScene" uid="uid://c512w6vss5snx" path="res://Scene/pause_menu.tscn" id="10_40p8h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oiny3"]
 size = Vector2(20, 210)
@@ -120,6 +121,8 @@ shape = SubResource("RectangleShape2D_wb423")
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Limit"]
 position = Vector2(409, 92)
 shape = SubResource("RectangleShape2D_wb423")
+
+[node name="Pause_menu" parent="." instance=ExtResource("10_40p8h")]
 
 [editable path="Player"]
 [editable path="Area2D"]
