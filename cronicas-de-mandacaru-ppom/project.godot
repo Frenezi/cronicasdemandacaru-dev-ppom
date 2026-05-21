@@ -26,6 +26,7 @@ window/size/viewport_width=400
 window/size/viewport_height=208
 window/size/mode=2
 window/stretch/mode="canvas_items"
+window/defaults/default_clear_color=Color(0.3, 0.3, 0.3, 1)
 
 [editor_plugins]
 
