@@ -1,6 +1,7 @@
 extends Camera2D
 
 var target: Node2D
+var original_limit_bottom: int = 208
 
 func _ready() -> void:
 	get_target()
@@ -17,8 +18,8 @@ func get_target():
 
 func enter_cave(floor_y: float) -> void:
 	var tween = create_tween()
-	tween.tween_property(self, "limit_bottom", int(floor_y), 1.0)
+	tween.tween_property(self, "limit_bottom", int(floor_y), 0.8)
 
 func exit_cave() -> void:
 	var tween = create_tween()
-	tween.tween_property(self, "limit_bottom", 10000000, 1.0)
+	tween.tween_property(self, "limit_bottom", original_limit_bottom, 0.8)
