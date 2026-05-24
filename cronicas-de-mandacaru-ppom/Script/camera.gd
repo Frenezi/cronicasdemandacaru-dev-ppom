@@ -23,3 +23,7 @@ func enter_cave(floor_y: float) -> void:
 func exit_cave() -> void:
 	var tween = create_tween()
 	tween.tween_property(self, "limit_bottom", original_limit_bottom, 0.8)
+
+
+func _on_area_1_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.

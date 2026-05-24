@@ -1,6 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://b6hdedo22ii8i"]
+[gd_scene load_steps=16 format=3 uid="uid://f7xpr004yul5"]
 
 [ext_resource type="Texture2D" uid="uid://be5ngfr2eudc6" path="res://Sprites/Teclado/Teclado.png" id="1_f851v"]
+[ext_resource type="Script" uid="uid://cnafbxulvreio" path="res://Script/keyboard_instruction.gd" id="1_smnae"]
 [ext_resource type="Texture2D" uid="uid://l4ucwjyxpb2t" path="res://Sprites/Teclado/A.png" id="2_smnae"]
 [ext_resource type="Texture2D" uid="uid://b30pjgorsueup" path="res://Sprites/Teclado/A press.png" id="3_tqxf0"]
 [ext_resource type="Texture2D" uid="uid://bcswoosmmum8q" path="res://Sprites/Teclado/D.png" id="4_cbgm6"]
@@ -9,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cd6aecdts4nye" path="res://Sprites/Teclado/S press.png" id="7_bmset"]
 [ext_resource type="Texture2D" uid="uid://c6mu06j7fd2j0" path="res://Sprites/Teclado/W.png" id="8_vmh2q"]
 [ext_resource type="Texture2D" uid="uid://bc2wlldal2ajx" path="res://Sprites/Teclado/W press.png" id="9_j0eu3"]
+[ext_resource type="FontFile" uid="uid://ck253ora1fk1x" path="res://fonts/ByteBounce.ttf" id="11_tqxf0"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_nr8wp"]
 animations = [{
@@ -19,7 +21,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("3_tqxf0")
 }],
-"loop": false,
+"loop": true,
 "name": &"loop a",
 "speed": 5.0
 }]
@@ -67,24 +69,38 @@ animations = [{
 }]
 
 [node name="keyboard_instruction" type="Node2D"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_smnae")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Keyboard" type="Sprite2D" parent="."]
 texture = ExtResource("1_f851v")
 
 [node name="A - ANIM" type="AnimatedSprite2D" parent="."]
-position = Vector2(-18, 0)
+position = Vector2(-20, 0)
 sprite_frames = SubResource("SpriteFrames_nr8wp")
 animation = &"loop a"
+frame = 1
+frame_progress = 1.0
 
 [node name="D - ANIM" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_d2bti")
 animation = &"loop d"
 
 [node name="S - ANIM" type="AnimatedSprite2D" parent="."]
-position = Vector2(18, 0)
+position = Vector2(20, 0)
 sprite_frames = SubResource("SpriteFrames_ta5nu")
 animation = &"loop s"
 
 [node name="W - ANIM" type="AnimatedSprite2D" parent="."]
 position = Vector2(-5, -18)
 sprite_frames = SubResource("SpriteFrames_flf07")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -38.0
+offset_top = -48.0
+offset_right = 2.0
+offset_bottom = -25.0
+scale = Vector2(0.5, 0.5)
+theme_override_fonts/font = ExtResource("11_tqxf0")
+theme_override_font_sizes/font_size = 30
+metadata/_edit_use_anchors_ = true
