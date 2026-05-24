@@ -33,7 +33,7 @@ var dialogs_after = [
 
 var dialogs_repeat = [
 	"Xispa daqui",
-	"Se voce ir pra direita",
+	"Se voce ir a direita",
 	"Entre numa caverna",
 	"Deve estar aberta agora..."
 ]
