@@ -28,7 +28,7 @@ var dragging = null        # bloco sendo arrastado
 var drag_offset = Vector2()
 
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if fading_out:
 		print("FADING: ", puzzle_screen.modulate.a)
 		puzzle_screen.modulate.a -= 0.03  # velocidade do fade
@@ -47,7 +47,7 @@ func setup(question: String, answers: Array, blocks: Array, callback: Callable):
 
 	slot1.get_node("VBoxContainer/DropArea/Label").text = "solte aqui..."
 	slot1.get_node("VBoxContainer/DropArea/Label").visible = true
-	slot2.get_node("VBoxContainer/DropArea/Label").text = "solte aqui..."
+	slot2.get_node("VBoxContainer/DropArea/Label").text = "Arraste aqui "
 	slot2.get_node("VBoxContainer/DropArea/Label").visible = true
 	
 	bloco1.get_node("Label").text = blocks[0]
@@ -58,6 +58,7 @@ func setup(question: String, answers: Array, blocks: Array, callback: Callable):
 	fade_in()
 
 func _ready():
+	$ColorRect/Panel/BotaoReferencia.pressed.connect(_open_reference)
 	add_to_group("puzzle_layer")
 	btn.connect("pressed", Callable(self, "_on_confirm"))
 
@@ -123,7 +124,10 @@ func hide_bloco(block_text: String):
 		bloco1.visible = false
 	elif bloco2.get_node("Label").text == block_text:
 		bloco2.visible = false
-		
+
+func _open_reference():
+	var ref_screen = get_tree().get_first_node_in_group("reference_screen")
+	ref_screen.reopen()
 func fade_in():
 	var tw = create_tween()
 	tw.tween_property(puzzle_screen, "modulate:a", 0.8, 0.7)

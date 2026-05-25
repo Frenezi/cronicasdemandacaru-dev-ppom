@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://ced5qoogafj14"]
+
+[ext_resource type="Script" uid="uid://gpxyg42uh3ao" path="res://Script/reference_screen.gd" id="1_o78fa"]
+
+[node name="CanvasLayer" type="CanvasLayer" groups=["reference_screen"]]
+process_mode = 3
+script = ExtResource("1_o78fa")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 400.0
+offset_bottom = 207.0
+
+[node name="VBox" type="VBoxContainer" parent="Panel"]
+layout_mode = 0
+offset_left = 105.0
+offset_top = 51.0
+offset_right = 303.0
+offset_bottom = 159.0
+
+[node name="Title" type="Label" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="Content" type="RichTextLabel" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="CloseButton" type="Button" parent="Panel/VBox"]
+layout_mode = 2

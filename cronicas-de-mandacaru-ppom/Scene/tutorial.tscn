@@ -173,5 +173,6 @@ position = Vector2(22, 0)
 [node name="S - ANIM" parent="keyboard_instruction" index="3"]
 position = Vector2(2, 0)
 
+[editable path="Player"]
 [editable path="Level End"]
 [editable path="keyboard_instruction"]

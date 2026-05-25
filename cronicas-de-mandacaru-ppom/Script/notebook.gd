@@ -3,7 +3,7 @@ extends Area2D
 var comeback_duration = 1
 var fade_duration = 1
 @onready var sprite: Sprite2D = $Sprite2D
-@export var puzzle_id := "notebook_2"  # caso tenha várias charadas no jogo
+@export var puzzle_id := "notebook_1"  # caso tenha várias charadas no jogo
 
 
 # Called when the node enters the scene tree for the first time.

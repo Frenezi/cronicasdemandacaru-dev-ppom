@@ -4,7 +4,7 @@
 [ext_resource type="Theme" uid="uid://dgux3yr2s64nn" path="res://Theme/puzzle_theme.tres" id="2_jk22c"]
 [ext_resource type="FontFile" uid="uid://cg7nmsrpxuvmx" path="res://fonts/determination.ttf" id="2_x708r"]
 [ext_resource type="Script" uid="uid://dy7e06q0ovswx" path="res://Script/slot.gd" id="3_jfs2m"]
-[ext_resource type="Script" uid="uid://bo3uqji2pocal" path="res://Script/bloco.gd" id="4_44sd5"]
+[ext_resource type="Script" uid="uid://bo3uqji2pocal" path="res://Script/block.gd" id="4_44sd5"]
 [ext_resource type="Script" uid="uid://fpc7xellwk1j" path="res://Script/drop_area.gd" id="4_jk22c"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jk22c"]
@@ -224,3 +224,12 @@ offset_right = 120.0
 offset_bottom = 19.0
 grow_vertical = 2
 autowrap_mode = 2
+
+[node name="BotaoReferencia" type="Button" parent="ColorRect/Panel"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -8.0
+offset_bottom = 8.0
+grow_horizontal = 0

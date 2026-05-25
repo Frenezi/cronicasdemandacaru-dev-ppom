@@ -1,11 +1,12 @@
 extends Node2D
-
+#flags
 var player_nearby = false
 var dialog_active = false
 var dialog_index = 0
 var post_puzzle = false
 var puzzle_done = false
 var puzzle_started = false
+var no_paper_dialog = false  
 
 #var dos textos
 var full_text = ""
@@ -62,14 +63,26 @@ func _physics_process(delta):
 			else:
 				typing = false  # terminou de escrever	
 func _process(_delta):
-	if player_nearby and not dialog_active:
-		if Input.is_action_just_pressed("interact"):
-			start_dialog()
+	# ignora se o puzzle estiver aberto
+	if get_tree().get_first_node_in_group("puzzle_layer") != null:
+		return
+	if player_nearby and Input.is_action_just_pressed("interact"):
+		if not dialog_active:
+			_check_and_start_dialog()
+		else:
+			advance_dialog()  # ← else em vez de elif separado
 
-	elif dialog_active:
-		if Input.is_action_just_pressed("interact"):
-			advance_dialog()
-
+func _check_and_start_dialog():
+	if not ReferenceGlobal.collected_items["notebook_1_paper"]:
+		dialog_active = true
+		no_paper_dialog = true  # ← essa linha tá faltando!
+		interact_hint.visible = false
+		dialog_bubble.visible = true
+		get_tree().paused = true
+		show_dialog("Ei! Antes de começar, vai lá pegar o papel que deixei na mesa.")
+		return
+	# tem papel — fluxo normal
+	start_dialog()
 
 
 func start_dialog():
@@ -94,6 +107,14 @@ func advance_dialog():
 		if typing:
 			typing = false
 			dialog_label.text = full_text
+			return
+
+		# se era o diálogo sem papel, só fecha
+		if no_paper_dialog:
+			no_paper_dialog = false
+			dialog_bubble.visible = false
+			dialog_active = false
+			get_tree().paused = false
 			return
 
 		dialog_index += 1
