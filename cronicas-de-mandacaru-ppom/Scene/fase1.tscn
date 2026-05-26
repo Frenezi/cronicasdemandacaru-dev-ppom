@@ -1,12 +1,11 @@
-[gd_scene load_steps=33 format=4 uid="uid://dbawvgnwitb47"]
+[gd_scene load_steps=32 format=4 uid="uid://dbawvgnwitb47"]
 
 [ext_resource type="PackedScene" uid="uid://cw0i3lly6kgjh" path="res://entities/level_end.tscn" id="1_hoqjd"]
 [ext_resource type="PackedScene" uid="uid://tsvnbubb6bg4" path="res://entities/player.tscn" id="2_knfso"]
-[ext_resource type="Texture2D" uid="uid://p4m7t722vyji" path="res://Sprites/Seasonal Tilesets/2 - Autumn Forest/Background parts/6 - Distant_trees.png" id="3_mis3q"]
-[ext_resource type="Texture2D" uid="uid://rggkuuhbvqvr" path="res://Sprites/Seasonal Tilesets/2 - Autumn Forest/Background parts/5 - Tree_row_BG_2.png" id="4_05dq7"]
-[ext_resource type="Texture2D" uid="uid://b3uwjmgb48ts5" path="res://Sprites/Seasonal Tilesets/2 - Autumn Forest/Background parts/4 - Tree_row_BG_1.png" id="5_6mb5u"]
-[ext_resource type="Texture2D" uid="uid://cbkgwpd8luw1m" path="res://Sprites/Seasonal Tilesets/2 - Autumn Forest/Background parts/3 - Bottom_leaf_piles.png" id="6_c7q8a"]
-[ext_resource type="Texture2D" uid="uid://doec01stk8ge7" path="res://Sprites/Seasonal Tilesets/2 - Autumn Forest/Background parts/2 - Trees.png" id="7_x3dpb"]
+[ext_resource type="Texture2D" uid="uid://ugmo23gjy5io" path="res://Sprites/BACKGROUNDS/Main Background/Plan 5.png" id="3_knfso"]
+[ext_resource type="Texture2D" uid="uid://ctod68lu7jiru" path="res://Sprites/BACKGROUNDS/Main Background/Plan 4.png" id="4_mis3q"]
+[ext_resource type="Texture2D" uid="uid://b4che6i4navgq" path="res://Sprites/BACKGROUNDS/Main Background/Plan 3.png" id="5_05dq7"]
+[ext_resource type="Texture2D" uid="uid://dncqowl1fuvm3" path="res://Sprites/BACKGROUNDS/Main Background/Plan 1.png" id="6_6mb5u"]
 [ext_resource type="PackedScene" uid="uid://bf72x7xnrbxik" path="res://entities/camera.tscn" id="8_pc6fj"]
 [ext_resource type="Texture2D" uid="uid://btsu22rcqlpi4" path="res://Sprites/Seasonal Tilesets/2 - Autumn Forest/Terrain (16 x 16).png" id="9_v537a"]
 [ext_resource type="Texture2D" uid="uid://ck25if1p7jxut" path="res://Tile-sets/Terrain (16x16).png" id="10_7h6rw"]
@@ -20,7 +19,7 @@
 [ext_resource type="TileSet" uid="uid://d0oodp0vad5bf" path="res://Tiles/underwater.tres" id="16_mis3q"]
 [ext_resource type="PackedScene" uid="uid://dljkwum6ebndc" path="res://entities/bugzin.tscn" id="17_upwnu"]
 [ext_resource type="PackedScene" uid="uid://mcru88n4xcjf" path="res://entities/niede.tscn" id="18_hl50m"]
-[ext_resource type="Script" uid="uid://bljswrtq6jcxo" path="res://cave_zone.gd" id="19_1e345"]
+[ext_resource type="Script" uid="uid://bljswrtq6jcxo" path="res://Script/cave_zone.gd" id="19_1e345"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u6jjf"]
 size = Vector2(25, 187)
@@ -463,6 +462,7 @@ size = Vector2(223.44446, 70.33334)
 z_index = -1
 position = Vector2(-229, 3)
 metadata/_edit_vertical_guides_ = [491.0, 1062.0, 866.0]
+metadata/_edit_horizontal_guides_ = [33.0, 211.0, 327.0]
 
 [node name="Level End" parent="." instance=ExtResource("1_hoqjd")]
 
@@ -489,71 +489,65 @@ position = Vector2(1, -11.660004)
 [node name="CollisionShape2D" parent="Player/HITBOX" index="0"]
 position = Vector2(146, -11.660004)
 
+[node name="HealthBar" parent="Player/CanvasLayer" index="0"]
+visible = true
+
 [node name="Parallax2D 6" type="Parallax2D" parent="."]
 scroll_scale = Vector2(0.1, 0.1)
-repeat_size = Vector2(288, 0)
+repeat_size = Vector2(576, 0)
+repeat_times = 10
 
-[node name="6" type="Sprite2D" parent="Parallax2D 6"]
+[node name="6" type="TextureRect" parent="Parallax2D 6"]
 z_index = -1
 z_as_relative = false
 texture_repeat = 2
-texture = ExtResource("3_mis3q")
-centered = false
-offset = Vector2(0.1, 0)
-region_enabled = true
-region_rect = Rect2(0, 0, 576, 208)
+offset_top = -116.0
+offset_right = 576.0
+offset_bottom = 208.0
+texture = ExtResource("3_knfso")
+stretch_mode = 1
 
 [node name="Parallax2D 5" type="Parallax2D" parent="."]
 scroll_scale = Vector2(0.2, 0.2)
-repeat_size = Vector2(288, 0)
+repeat_size = Vector2(576, 0)
+repeat_times = 10
 
-[node name="5" type="Sprite2D" parent="Parallax2D 5"]
+[node name="5" type="TextureRect" parent="Parallax2D 5"]
 z_index = -1
 z_as_relative = false
 texture_repeat = 2
-texture = ExtResource("4_05dq7")
-centered = false
-region_enabled = true
-region_rect = Rect2(0, 0, 576, 208)
+texture = ExtResource("4_mis3q")
+stretch_mode = 1
 
 [node name="Parallax2D 4" type="Parallax2D" parent="."]
 scroll_scale = Vector2(0.3, 0.3)
-repeat_size = Vector2(288, 0)
+repeat_size = Vector2(576, 0)
+repeat_times = 10
 
-[node name="4" type="Sprite2D" parent="Parallax2D 4"]
+[node name="4" type="TextureRect" parent="Parallax2D 4"]
 z_index = -1
 z_as_relative = false
 texture_repeat = 2
-texture = ExtResource("5_6mb5u")
-centered = false
-region_enabled = true
-region_rect = Rect2(0, 0, 576, 208)
-
-[node name="Parallax2D 3" type="Parallax2D" parent="."]
-scroll_scale = Vector2(0.4, 0.4)
-repeat_size = Vector2(288, 0)
-
-[node name="3" type="Sprite2D" parent="Parallax2D 3"]
-z_index = -1
-z_as_relative = false
-texture_repeat = 2
-texture = ExtResource("6_c7q8a")
-centered = false
-region_enabled = true
-region_rect = Rect2(0, 0, 576, 208)
+offset_top = -117.0
+offset_right = 576.0
+offset_bottom = 207.0
+texture = ExtResource("5_05dq7")
+stretch_mode = 1
 
 [node name="Parallax2D 2" type="Parallax2D" parent="."]
 scroll_scale = Vector2(0.5, 0.5)
-repeat_size = Vector2(288, 0)
+repeat_size = Vector2(576, 0)
+repeat_times = 10
 
-[node name="2" type="Sprite2D" parent="Parallax2D 2"]
+[node name="2" type="TextureRect" parent="Parallax2D 2"]
 z_index = -1
 z_as_relative = false
 texture_repeat = 2
-texture = ExtResource("7_x3dpb")
-centered = false
-region_enabled = true
-region_rect = Rect2(0, 0, 576, 208)
+offset_top = -117.0
+offset_right = 576.0
+offset_bottom = 207.0
+texture = ExtResource("6_6mb5u")
+stretch_mode = 1
 
 [node name="Camera" parent="." groups=["camera"] instance=ExtResource("8_pc6fj")]
 position = Vector2(23, 170)

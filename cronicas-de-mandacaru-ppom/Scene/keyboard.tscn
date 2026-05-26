@@ -83,11 +83,11 @@ frame = 1
 frame_progress = 1.0
 
 [node name="D - ANIM" type="AnimatedSprite2D" parent="."]
+position = Vector2(20, 0)
 sprite_frames = SubResource("SpriteFrames_d2bti")
 animation = &"loop d"
 
 [node name="S - ANIM" type="AnimatedSprite2D" parent="."]
-position = Vector2(20, 0)
 sprite_frames = SubResource("SpriteFrames_ta5nu")
 animation = &"loop s"
 

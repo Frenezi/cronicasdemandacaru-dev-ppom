@@ -52,16 +52,16 @@ func show_instruction(type: String):
 			position = Vector2(200, -30 )  # ← posição na tela
 		"s":
 			anim_s.play()
-			label.text = "Pressione S para cair"
-			position = Vector2(30, 130)  # ← outra posição
+			label.text = "Segure S para cair"
+			position = Vector2(30, 180)  # ← outra posição
 		"w_a":
 			anim_w.play()
 			anim_a.play()
-			label.text = "Pressione W + A para pular esta plataforma!"
-			position = Vector2(270, 175)
+			label.text = "Segure W e A para pular esta plataforma!"
+			position = Vector2(120, 85)
 		"a":
 			anim_a.play()
 			label.text = "Segure A para andar <--"
-			position = Vector2(325, 130)
+			position = Vector2(290, 80)
 		"end":
 			hide_instruction()

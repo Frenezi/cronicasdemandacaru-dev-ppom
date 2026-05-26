@@ -190,7 +190,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"jump",
-"speed": 4.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -236,9 +236,10 @@ z_index = 2
 position = Vector2(0, -13)
 scale = Vector2(1.1692972, 1.0045136)
 sprite_frames = SubResource("SpriteFrames_i623q")
-animation = &"idle"
+animation = &"jump"
 autoplay = "idle"
-frame_progress = 0.20720544
+frame = 3
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 z_index = 2

@@ -24,3 +24,7 @@ func _on_body_exited(body):
 			var kb = get_tree().get_first_node_in_group("keyboard_instruction")
 			if kb.current_instruction == instruction_type:
 				kb.hide_instruction()
+
+
+func _on_area_3_body_exited(body: Node2D) -> void:
+	pass # Replace with function body.
