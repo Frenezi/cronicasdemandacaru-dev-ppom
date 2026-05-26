@@ -1,7 +1,7 @@
 [gd_scene load_steps=72 format=3 uid="uid://ceurjiyfeljuy"]
 
 [ext_resource type="Script" uid="uid://bncnklakyl3hv" path="res://Script/menu.gd" id="1_eas8t"]
-[ext_resource type="Texture2D" uid="uid://k261ll7fhum8" path="res://Sprites/BACKGROUNDS/ChatGPT Image 19 de mai. de 2026, 16_23_03.png" id="2_jsa40"]
+[ext_resource type="Texture2D" uid="uid://c6thsi6b0s52y" path="res://Sprites/BACKGROUNDS/menu.png" id="2_8rqvv"]
 [ext_resource type="FontFile" uid="uid://cg7nmsrpxuvmx" path="res://fonts/determination.ttf" id="2_u2k45"]
 [ext_resource type="Texture2D" uid="uid://b00pn8jsjtg3u" path="res://Sprites/HOBBIT/DEATH/Hobbit - death1.png" id="14_5t1yb"]
 [ext_resource type="Texture2D" uid="uid://b35pqsf2cmef0" path="res://Sprites/HOBBIT/DEATH/Hobbit - death2.png" id="15_f8ahi"]
@@ -26,6 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://cmoogcw38te8r" path="res://Sprites/HOBBIT/JUMP/Hobbit - jumpt2.png" id="35_61olt"]
 [ext_resource type="Texture2D" uid="uid://db1anhrm5jp5v" path="res://Sprites/HOBBIT/JUMP/Hobbit - jumpt3.png" id="36_bqmv8"]
 [ext_resource type="Texture2D" uid="uid://bdjgsfjv3k6f2" path="res://Sprites/HOBBIT/JUMP/Hobbit - jumpt4.png" id="37_g31pv"]
+[ext_resource type="Texture2D" uid="uid://cqmx2wjb757nt" path="res://Sprites/BACKGROUNDS/logo.png" id="37_xv7ii"]
 [ext_resource type="Texture2D" uid="uid://yg6mlaauw03r" path="res://Sprites/HOBBIT/RUN/Hobbit - run1.png" id="38_jxo6x"]
 [ext_resource type="Texture2D" uid="uid://darc1xja4qbs0" path="res://Sprites/HOBBIT/RUN/Hobbit - run2.png" id="39_s6nec"]
 [ext_resource type="Texture2D" uid="uid://bf4b0h170t565" path="res://Sprites/HOBBIT/RUN/Hobbit - run3.png" id="40_ude8o"]
@@ -36,8 +37,6 @@
 [ext_resource type="Texture2D" uid="uid://df4btf0vuy234" path="res://Sprites/HOBBIT/RUN/Hobbit - run8.png" id="45_wteef"]
 [ext_resource type="Texture2D" uid="uid://bsv7imj7duqgd" path="res://Sprites/HOBBIT/RUN/Hobbit - run9.png" id="46_fvppf"]
 [ext_resource type="Texture2D" uid="uid://dv08g3p12u24g" path="res://Sprites/HOBBIT/RUN/Hobbit - run10.png" id="47_sw85d"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7x646"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7x646"]
 
@@ -311,44 +310,34 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_eas8t")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_jsa40")
+texture = ExtResource("2_8rqvv")
 expand_mode = 3
 stretch_mode = 6
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -99.0
-offset_top = -23.5
-offset_right = 99.0
-offset_bottom = 23.5
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = -1
+anchor_left = 0.485
+anchor_top = 0.375
+anchor_right = 0.485
+anchor_bottom = 0.375
+offset_right = 256.0
+offset_bottom = 132.0
 mouse_filter = 0
-
-[node name="TitleScreen" type="Label" parent="VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-theme_override_colors/font_color = Color(0.44, 0.68266666, 1, 1)
-theme_override_fonts/font = ExtResource("2_u2k45")
-theme_override_font_sizes/font_size = 28
-text = "Cronicas de Mandacaru"
+metadata/_edit_use_anchors_ = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+alignment = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
@@ -357,10 +346,9 @@ mouse_filter = 0
 [node name="Play" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer" groups=["button"]]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_u2k45")
-theme_override_styles/normal = SubResource("StyleBoxFlat_7x646")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_7x646")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_45on0")
-text = "Play"
+text = "PLAY"
 flat = true
 
 [node name="Options" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer" groups=["button"]]
@@ -368,7 +356,7 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("2_u2k45")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_7x646")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_45on0")
-text = "Controls (EM BREVE)"
+text = "OPÕÇÕES"
 flat = true
 
 [node name="Sair" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer" groups=["button"]]
@@ -376,13 +364,22 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("2_u2k45")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_7x646")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_45on0")
-text = "Sair"
+text = "SAIR"
 flat = true
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="VBoxContainer/HBoxContainer/VBoxContainer/Sair"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 z_index = 2
-position = Vector2(-68.5, 12)
+position = Vector2(113, 172)
 scale = Vector2(1.6, 1.375)
 sprite_frames = SubResource("SpriteFrames_fwkbm")
 animation = &"idle"
 autoplay = "idle"
+
+[node name="logo" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 7.0
+offset_right = 385.44772
+offset_bottom = 74.0
+texture = ExtResource("37_xv7ii")
+expand_mode = 3

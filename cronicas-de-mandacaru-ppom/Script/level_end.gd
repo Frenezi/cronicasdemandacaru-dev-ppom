@@ -3,7 +3,7 @@ extends Area2D
 # Lista de cenas em ordem
 const SCENES = [
 	"res://Scene/tutorial.tscn",
-	"res://Scene/tropic.tscn",
+	"res://Scene/fase1.tscn",
 	"res://Scene/forest.tscn",
 	"res://Scene/cave.tscn",
 	# adiciona mais cenas aqui na ordem que quiser

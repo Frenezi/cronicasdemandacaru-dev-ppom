@@ -4,11 +4,11 @@ extends Control
 # DADOS DA CUTSCENE
 # ----------------------------------------------------
 const SCENE_DATA = [
-	{"path": "res://cutscene/1.png", "text": "Essa jornada começa com um jovem programador, que no momento trabalha em silêncio..."},
-	{"path": "res://cutscene/2.png", "text": "Mas, de repente o silêncio é substituido por um grande barulho"},
-	{"path": "res://cutscene/3.png", "text": "Desesperado, o jovem ficou estático, paralisado de medo"},
-	{"path": "res://cutscene/4.png", "text": "Por consequência, o choque da explosão alcançou a casa, soterrando o garoto..."},
-	{"path": "res://cutscene/5.png", "text": "De repente, o garoto acorda e... após conseguir sair dos destroços, consegue sentir que algo dentro dele mudou, agora ele viaja para entender o ocorrido..."}
+	{"path": "res://cutscene/cutscene_t1.png", "text": "Era uma noite tranquila para Mandacaru o Tatu-bandeira descansava sem imaginar o que estava por vir..."},
+	{"path": "res://cutscene/cutscene_t2.png", "text": "Um alerta da ACT(Agência de Correção de Bugs). Mandacaru recebeu uma missão: investigar uma série de bugs críticos reportados no Parque Nacional da Serra da Capivara."},
+	{"path": "res://cutscene/cutscene_t3.png", "text": "Mandacaru chegou ao parque sob a lua crescente. O lugar parecia normal... mas algo estava errado."},
+	{"path": "res://cutscene/cutscene_t4.png", "text":  "Criaturas impossíveis emergiram das rochas, os bugs haviam corrompido a própria realidade do parque. Mandacaru ficou paralisado de medo."},
+	{"path": "res://cutscene/cutscene_t5.png", "text": "Distraído pelas silhuetas das criaturas, Mandacaru escorregou e caiu numa caverna escura. Lá embaixo... a missão havia apenas começado."}
 ]
 
 # ----------------------------------------------------
@@ -117,5 +117,5 @@ func start_cutscene():
 func end_cutscene():
 	print("Cutscene Terminada! Carregando o jogo...")
 
-	var next_scene = load("res://Scene/city.tscn")
+	var next_scene = load("res://Scene/fase1.tscn")
 	get_tree().change_scene_to_packed(next_scene)
