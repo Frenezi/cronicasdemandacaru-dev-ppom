@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://bis0lg31sw5dn"]
+[gd_scene load_steps=15 format=3 uid="uid://bis0lg31sw5dn"]
 
 [ext_resource type="Script" uid="uid://d4ganpjy4kx6" path="res://Script/puzzle_layer.gd" id="1_df3t2"]
+[ext_resource type="Texture2D" uid="uid://3vm1catvamfu" path="res://Sprites/botões/puzzle.png" id="2_4lub5"]
 [ext_resource type="Theme" uid="uid://dgux3yr2s64nn" path="res://Theme/puzzle_theme.tres" id="2_jk22c"]
 [ext_resource type="FontFile" uid="uid://cg7nmsrpxuvmx" path="res://fonts/determination.ttf" id="2_x708r"]
 [ext_resource type="Script" uid="uid://dy7e06q0ovswx" path="res://Script/slot.gd" id="3_jfs2m"]
@@ -9,13 +10,57 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jk22c"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rueue"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8papo"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0.44, 0.14556666, 0.11879999, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8papo"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rueue"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0.4392157, 0.14509805, 0.11764706, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4lub5"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4lub5"]
+bg_color = Color(0.01, 0.01, 0.01, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.10709999, 0.25483003, 0.51, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vsk1x"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vsk1x"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.105882354, 0.25490198, 0.50980395, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b2kpe"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_05olu"]
 
 [node name="puzzle_layer" type="CanvasLayer"]
 process_mode = 3
@@ -23,14 +68,17 @@ script = ExtResource("1_df3t2")
 metadata/_edit_vertical_guides_ = [0.0, 124.0]
 metadata/_edit_horizontal_guides_ = [167.0]
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="TextureRect" parent="."]
 modulate = Color(1, 1, 1, 0.79607844)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 1604.9998
+offset_bottom = 836.9999
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 1)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_4lub5")
 
 [node name="Panel" type="Panel" parent="ColorRect"]
 layout_mode = 1
@@ -46,11 +94,12 @@ theme_override_styles/panel = SubResource("StyleBoxEmpty_jk22c")
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
-offset_left = 20.0
-offset_top = 1.0
-offset_right = -20.0
-offset_bottom = 41.0
+offset_left = 140.0
+offset_top = 174.99998
+offset_right = -159.99988
+offset_bottom = 310.0
 theme_override_fonts/font = ExtResource("2_x708r")
+theme_override_font_sizes/font_size = 51
 horizontal_alignment = 1
 autowrap_mode = 1
 
@@ -61,12 +110,13 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 106.0
-offset_top = -33.0
-offset_right = 199.0
-offset_bottom = -2.0
+offset_left = 277.5
+offset_top = -279.99988
+offset_right = 690.8334
+offset_bottom = -199.99988
 grow_horizontal = 2
 grow_vertical = 0
+scale = Vector2(1.5, 1.5)
 theme_override_fonts/font = ExtResource("2_x708r")
 text = "Confirmar"
 flat = true
@@ -78,13 +128,16 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -89.0
-offset_top = -40.0
-offset_right = 89.0
+offset_left = 452.5
+offset_top = -134.99988
+offset_right = 630.5
+offset_bottom = -94.99988
 grow_horizontal = 2
 grow_vertical = 0
+scale = Vector2(1.5, 1.5)
 theme_override_colors/font_color = Color(0.7729057, 0.26917073, 0.27129582, 1)
 theme_override_fonts/font = ExtResource("2_x708r")
+horizontal_alignment = 1
 
 [node name="Target" type="Label" parent="ColorRect/Panel"]
 layout_mode = 1
@@ -93,25 +146,29 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -89.0
-offset_top = 46.0
-offset_right = 89.0
-offset_bottom = 86.0
+offset_left = 242.5
+offset_top = -669.99994
+offset_right = 637.5
+offset_bottom = -622.99994
 grow_horizontal = 2
 grow_vertical = 0
+scale = Vector2(1.8, 1.8)
 theme_override_fonts/font = ExtResource("2_x708r")
-text = "Errado! Tente denovo.\\"
+text = "ARRASTE OS BLOCOS ABAIXO NAS CAIXINHAS
+CERTAS"
+horizontal_alignment = 1
 
 [node name="Slots" type="Control" parent="ColorRect/Panel"]
 anchors_preset = 0
 
 [node name="Slot1" type="Panel" parent="ColorRect/Panel/Slots"]
 layout_mode = 0
-offset_left = 1.0
-offset_top = 95.0
-offset_right = 121.0
-offset_bottom = 146.0
-theme_override_styles/panel = SubResource("StyleBoxEmpty_rueue")
+offset_left = 225.0
+offset_top = 420.0
+offset_right = 345.0
+offset_bottom = 470.0
+scale = Vector2(4, 4)
+theme_override_styles/panel = SubResource("StyleBoxFlat_8papo")
 script = ExtResource("3_jfs2m")
 
 [node name="VBoxContainer" type="Control" parent="ColorRect/Panel/Slots/Slot1"]
@@ -125,6 +182,7 @@ offset_left = 130.0
 offset_top = 15.0
 offset_right = 250.0
 offset_bottom = 38.0
+theme_override_font_sizes/font_size = 8
 autowrap_mode = 2
 
 [node name="DropArea" type="ColorRect" parent="ColorRect/Panel/Slots/Slot1/VBoxContainer"]
@@ -132,22 +190,26 @@ custom_minimum_size = Vector2(120, 50)
 layout_mode = 0
 offset_right = 120.0
 offset_bottom = 50.0
-color = Color(1, 1, 1, 0.15686275)
+color = Color(0, 0, 0, 0)
 script = ExtResource("4_jk22c")
 
 [node name="Label" type="Label" parent="ColorRect/Panel/Slots/Slot1/VBoxContainer/DropArea"]
 layout_mode = 0
-offset_left = -1.0
-offset_top = 21.0
-offset_right = 120.0
-offset_bottom = 44.0
+offset_top = 14.999996
+offset_right = 121.0
+offset_bottom = 37.999996
+text = "g"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Slot2" type="Panel" parent="ColorRect/Panel/Slots"]
 layout_mode = 0
-offset_top = 35.0
-offset_right = 120.0
-offset_bottom = 85.0
-theme_override_styles/panel = SubResource("StyleBoxEmpty_8papo")
+offset_left = 225.0
+offset_top = 730.0
+offset_right = 345.0
+offset_bottom = 780.0
+scale = Vector2(4, 4)
+theme_override_styles/panel = SubResource("StyleBoxFlat_rueue")
 script = ExtResource("3_jfs2m")
 
 [node name="VBoxContainer" type="Control" parent="ColorRect/Panel/Slots/Slot2"]
@@ -160,7 +222,7 @@ custom_minimum_size = Vector2(120, 50)
 layout_mode = 0
 offset_right = 120.0
 offset_bottom = 40.0
-color = Color(1, 1, 1, 0.15686275)
+color = Color(0, 0, 0, 0)
 script = ExtResource("4_jk22c")
 
 [node name="Label" type="Label" parent="ColorRect/Panel/Slots/Slot2/VBoxContainer/DropArea"]
@@ -168,6 +230,8 @@ layout_mode = 0
 offset_top = 15.0
 offset_right = 120.0
 offset_bottom = 38.0
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Label" type="Label" parent="ColorRect/Panel/Slots/Slot2/VBoxContainer"]
 layout_mode = 0
@@ -175,22 +239,33 @@ offset_left = 130.0
 offset_top = 15.0
 offset_right = 250.0
 offset_bottom = 38.0
+theme_override_font_sizes/font_size = 8
 autowrap_mode = 2
 
-[node name="Blocos" type="HBoxContainer" parent="ColorRect/Panel"]
+[node name="Blocos" type="Control" parent="ColorRect/Panel"]
 layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_top = -40.0
-offset_right = 244.0
-grow_vertical = 0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -122.0
+offset_top = -20.0
+offset_right = 122.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
 
 [node name="Bloco1" type="Panel" parent="ColorRect/Panel/Blocos"]
 custom_minimum_size = Vector2(120, 40)
-layout_mode = 2
+layout_mode = 0
+offset_left = 230.0
+offset_top = 45.0
+offset_right = 350.0
+offset_bottom = 85.0
 size_flags_horizontal = 4
-theme_override_styles/panel = SubResource("StyleBoxEmpty_4lub5")
+theme_override_styles/panel = SubResource("StyleBoxFlat_4lub5")
 script = ExtResource("4_44sd5")
 
 [node name="Label" type="Label" parent="ColorRect/Panel/Blocos/Bloco1"]
@@ -205,12 +280,19 @@ offset_top = -20.0
 offset_bottom = 19.0
 grow_horizontal = 0
 grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="Bloco2" type="Panel" parent="ColorRect/Panel/Blocos"]
 custom_minimum_size = Vector2(120, 40)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_vsk1x")
+layout_mode = 0
+offset_left = 370.0
+offset_top = 45.0
+offset_right = 490.0
+offset_bottom = 85.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_vsk1x")
 script = ExtResource("4_44sd5")
 
 [node name="Label" type="Label" parent="ColorRect/Panel/Blocos/Bloco2"]
@@ -223,6 +305,9 @@ offset_top = -21.0
 offset_right = 120.0
 offset_bottom = 19.0
 grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="BotaoReferencia" type="Button" parent="ColorRect/Panel"]
@@ -230,6 +315,23 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -8.0
-offset_bottom = 8.0
+offset_left = -289.99988
+offset_top = 85.0
+offset_right = -244.99988
+offset_bottom = 106.66667
 grow_horizontal = 0
+scale = Vector2(3, 3)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_b2kpe")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_05olu")
+text = "DICA"
+
+[node name="Titulo" type="Label" parent="ColorRect/Panel"]
+layout_mode = 0
+offset_left = 340.0
+offset_top = 45.000004
+offset_right = 1649.9999
+offset_bottom = 119.999985
+theme_override_font_sizes/font_size = 65
+text = "CRONICAS DE MANDACARU "
+horizontal_alignment = 1
+vertical_alignment = 1

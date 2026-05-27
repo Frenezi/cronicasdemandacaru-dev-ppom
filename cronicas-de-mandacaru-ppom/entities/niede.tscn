@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://mcru88n4xcjf"]
 
-[ext_resource type="Script" uid="uid://cfx82dncueiyx" path="res://Script/npc2.gd" id="1_kdfgx"]
+[ext_resource type="Script" uid="uid://cfx82dncueiyx" path="res://Script/niede_v1.gd" id="1_kdfgx"]
 [ext_resource type="Texture2D" uid="uid://c2bhvimt8x1ya" path="res://Sprites/Niede/Niede_idle.png" id="2_kdfgx"]
 [ext_resource type="Texture2D" uid="uid://cn2wofaa0b2u" path="res://Sprites/Niede/Niede_idle2.png" id="3_8pcvg"]
 [ext_resource type="Texture2D" uid="uid://dgd8jog1wmkbq" path="res://Sprites/Niede/Niede_idle3.png" id="4_nu2a8"]
@@ -70,7 +70,7 @@ offset_bottom = 40.0
 theme = ExtResource("6_36iao")
 
 [node name="KeyHint" type="AnimatedSprite2D" parent="InteractHint"]
-position = Vector2(0, -20.000002)
+position = Vector2(0, -24.000002)
 scale = Vector2(0.890625, 0.81250024)
 sprite_frames = SubResource("SpriteFrames_upjdb")
 autoplay = "default"
@@ -97,10 +97,6 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 12.0
-offset_top = 15.0
-offset_right = -14.0
-offset_bottom = -14.0
 grow_horizontal = 2
 grow_vertical = 2
 horizontal_alignment = 1
@@ -109,9 +105,10 @@ autowrap_mode = 2
 justification_flags = 169
 
 [node name="KeyHint" type="AnimatedSprite2D" parent="DialogBubble/Panel"]
-position = Vector2(75, 34)
+position = Vector2(75, 55)
 scale = Vector2(0.5625, 0.5)
 sprite_frames = SubResource("SpriteFrames_upjdb")
+autoplay = "default"
 frame_progress = 0.7296158
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

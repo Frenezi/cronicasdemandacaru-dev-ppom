@@ -13,16 +13,12 @@ var typing_speed = 0.05
 var typing_timer = 0.0
 
 var dialogs = [
-	"Olá, voce é novo por aqui?",
-	"Eu sou Niéde Guidon",
-	"Posso te guiar até a saída",
-	"Aqui é um lugar perigoso!",
-	"Se planeja avancar",
-	"Também pode contar comigo!",
-	"A frente tem uma caverna",
-	"Mas ela está bloqueada",
-	"Talvez tenha algum mecanismo...",
-	"Enfim, explore e me encontre lá"
+	"Olá tamanduázinho",
+	"Encontrei algumas dicas",
+	"Um dinossauro travesso pode abrir aqui",
+	"Mas ele fará uma pergunta difícil",
+	"Procure um papel de dica",
+	"Vai te ajudar a responder!",
 ]
 
 var dialogs_repeat = [

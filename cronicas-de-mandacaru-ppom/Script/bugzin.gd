@@ -1,6 +1,7 @@
 extends Node2D
 #flags
 var player_nearby = false
+var player_ref = null
 var dialog_active = false
 var dialog_index = 0
 var post_puzzle = false
@@ -66,11 +67,15 @@ func _process(_delta):
 	# ignora se o puzzle estiver aberto
 	if get_tree().get_first_node_in_group("puzzle_layer") != null:
 		return
-	if player_nearby and Input.is_action_just_pressed("interact"):
-		if not dialog_active:
-			_check_and_start_dialog()
-		else:
-			advance_dialog()  # ← else em vez de elif separado
+	if player_nearby and player_ref:
+		interact_hint.visible = player_ref.is_on_floor()
+	
+	if player_nearby and player_ref and player_ref.is_on_floor():
+		if Input.is_action_just_pressed("interact"):
+			if not dialog_active:
+				_check_and_start_dialog()
+			else:
+				advance_dialog()
 
 func _check_and_start_dialog():
 	if not ReferenceGlobal.collected_items["notebook_1_paper"]:
@@ -152,6 +157,9 @@ func show_dialog(text: String):
 func start_post_puzzle_dialog():
 	if puzzle_done:  # ← se já completou, não abre de novo
 		return
+	var blocker = get_tree().get_first_node_in_group("blocker_tiles")
+	if blocker:
+		blocker.queue_free()
 	post_puzzle = true
 	dialog_index = 0
 	dialog_bubble.visible = true
@@ -171,14 +179,14 @@ func end_dialog_repeat():
 
 
 func _on_area_2d_body_entered(body):
-	print("ENTROU: ", body.name)
 	if body.is_in_group("player"):
-		print("É O PLAYER!")
+		player_ref = body
 		player_nearby = true
 		interact_hint.visible = true
 
 func _on_area_2d_body_exited(body):
 	if body.is_in_group("player"):
+		player_ref = null
 		player_nearby = false
 		if not dialog_active:
 			interact_hint.visible = false

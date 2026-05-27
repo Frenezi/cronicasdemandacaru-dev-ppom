@@ -1,27 +1,46 @@
-[gd_scene load_steps=2 format=3 uid="uid://ced5qoogafj14"]
+[gd_scene load_steps=6 format=3 uid="uid://ced5qoogafj14"]
 
 [ext_resource type="Script" uid="uid://gpxyg42uh3ao" path="res://Script/reference_screen.gd" id="1_o78fa"]
+[ext_resource type="Texture2D" uid="uid://mym4p6tivwbh" path="res://Sprites/papiros/dica_1.png" id="2_qymq6"]
+[ext_resource type="Texture2D" uid="uid://bvb1a42f8wdab" path="res://Sprites/Teclado/ESC.png" id="3_7ks87"]
+[ext_resource type="Texture2D" uid="uid://wrpfcj0jqfwg" path="res://Sprites/Teclado/ESC press.png" id="4_bbos2"]
+[ext_resource type="Theme" uid="uid://dgux3yr2s64nn" path="res://Theme/puzzle_theme.tres" id="5_bbos2"]
 
 [node name="CanvasLayer" type="CanvasLayer" groups=["reference_screen"]]
 process_mode = 3
 script = ExtResource("1_o78fa")
+metadata/_edit_vertical_guides_ = [82.0, 315.0]
 
-[node name="Panel" type="Panel" parent="."]
-offset_right = 400.0
-offset_bottom = 207.0
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 84.99999
+offset_top = 49.999996
+offset_right = 2360.0
+offset_bottom = 1150.0
+scale = Vector2(0.1, 0.1)
+size_flags_horizontal = 0
+size_flags_vertical = 8
+texture = ExtResource("2_qymq6")
+stretch_mode = 5
 
-[node name="VBox" type="VBoxContainer" parent="Panel"]
+[node name="TextureButton" type="TextureButton" parent="TextureRect"]
 layout_mode = 0
-offset_left = 105.0
-offset_top = 51.0
-offset_right = 303.0
-offset_bottom = 159.0
+offset_left = 2310.0
+offset_top = -139.99997
+offset_right = 2326.0
+offset_bottom = -123.99997
+scale = Vector2(10, 10)
+texture_normal = ExtResource("3_7ks87")
+texture_pressed = ExtResource("4_bbos2")
 
-[node name="Title" type="Label" parent="Panel/VBox"]
-layout_mode = 2
-
-[node name="Content" type="RichTextLabel" parent="Panel/VBox"]
-layout_mode = 2
-
-[node name="CloseButton" type="Button" parent="Panel/VBox"]
-layout_mode = 2
+[node name="Label" type="Label" parent="TextureRect"]
+layout_mode = 0
+offset_left = 360.00006
+offset_top = 420.00003
+offset_right = 513.00006
+offset_bottom = 445.00003
+scale = Vector2(10, 10)
+theme = ExtResource("5_bbos2")
+text = "Voce aprendeu: 
+Variáveis!"
+horizontal_alignment = 1
+vertical_alignment = 1

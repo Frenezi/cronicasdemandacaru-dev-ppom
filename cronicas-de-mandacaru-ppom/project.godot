@@ -45,6 +45,7 @@ items=""
 player_bullet=""
 npc=""
 reference_screen=""
+blocker_tiles=""
 
 [input]
 

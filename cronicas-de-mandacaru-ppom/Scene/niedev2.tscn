@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://6q3jcuaj4htk"]
+
+[ext_resource type="PackedScene" uid="uid://mcru88n4xcjf" path="res://entities/niede.tscn" id="1_b34do"]
+[ext_resource type="Script" uid="uid://be5qpqjlq36q5" path="res://Script/niede_v2.gd" id="2_7vquv"]
+
+[node name="niede2" instance=ExtResource("1_b34do")]
+script = ExtResource("2_7vquv")
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+scale = Vector2(-1, 1)
+frame_progress = 0.6359467
+
+[node name="KeyHint" parent="InteractHint" index="0"]
+position = Vector2(0, -23.000002)

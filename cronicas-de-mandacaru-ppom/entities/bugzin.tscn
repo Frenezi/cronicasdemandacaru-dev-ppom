@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://dljkwum6ebndc"]
 
-[ext_resource type="Script" uid="uid://tmrjmauc7naf" path="res://Script/npc.gd" id="1_slxoh"]
+[ext_resource type="Script" uid="uid://tmrjmauc7naf" path="res://Script/bugzin.gd" id="1_slxoh"]
 [ext_resource type="Texture2D" uid="uid://da1cqueh18dll" path="res://Sprites/Bugzin/idle/dino_idle2.png" id="3_buswv"]
 [ext_resource type="Texture2D" uid="uid://b6f3rbam6d84w" path="res://Sprites/Bugzin/idle/dino_idle3.png" id="4_d61ma"]
 [ext_resource type="Texture2D" uid="uid://cqox1ny6skr6f" path="res://Sprites/Bugzin/idle/dino_idle4.png" id="4_xx2fk"]
@@ -97,10 +97,6 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 12.0
-offset_top = 15.0
-offset_right = -14.0
-offset_bottom = -14.0
 grow_horizontal = 2
 grow_vertical = 2
 horizontal_alignment = 1
@@ -109,9 +105,10 @@ autowrap_mode = 2
 justification_flags = 169
 
 [node name="KeyHint" type="AnimatedSprite2D" parent="DialogBubble/Panel"]
-position = Vector2(75, 34)
+position = Vector2(75, 55)
 scale = Vector2(0.5625, 0.5)
 sprite_frames = SubResource("SpriteFrames_upjdb")
+autoplay = "default"
 frame_progress = 0.7296158
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

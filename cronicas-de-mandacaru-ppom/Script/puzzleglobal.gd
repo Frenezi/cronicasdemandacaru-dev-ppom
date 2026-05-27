@@ -21,7 +21,7 @@ var puzzles = {
 	"notebook_1": {
 		"question": "Print, um comando de saída!",
 		"slot_labels": [
-			"--> EU QUERO UM BLOCO QUE MOSTRE: Bruno",
+			"--> EU QUERO UM BLOCO QUE MOSTRE: ",
             "--> EU QUERO UM BLOCO QUE MOSTRE: Olá mundo!"
 		],
 		"blocks": [
@@ -31,10 +31,11 @@ var puzzles = {
 		"reward": Callable(self, "reward_notebook_1")
 	},
 	"notebook_2": {
-		"question": "Variáveis, caixas que guardam tudo!",
+		"question": "As variáveis na linguagem Python guardam valores, exemplo:
+			nome = \"Ana\", nome é a caixa, \"Ana\" é o valor guardado!",
 		"slot_labels": [
-			"--> EU QUERO UM BLOCO EM QUE X RECEBE 15",
-			"--> EU QUERO UM BLOCO EM QUE X RECEBE: \"Bruno\""
+			"--> BLOCO EM QUE X É 15",
+			"--> BLOCO EM QUE X: \"Bruno\""
 		],
 		"blocks": [
 			'X = 15',

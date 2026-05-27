@@ -45,9 +45,9 @@ func setup(question: String, answers: Array, blocks: Array, callback: Callable):
 	slot1.get_node("VBoxContainer/Label").text = answers[0]  # descrição continua igual
 	slot2.get_node("VBoxContainer/Label").text = answers[1]
 
-	slot1.get_node("VBoxContainer/DropArea/Label").text = "solte aqui..."
+	slot1.get_node("VBoxContainer/DropArea/Label").text = "Arraste o bloco \n aqui"
 	slot1.get_node("VBoxContainer/DropArea/Label").visible = true
-	slot2.get_node("VBoxContainer/DropArea/Label").text = "Arraste aqui "
+	slot2.get_node("VBoxContainer/DropArea/Label").text = "Arraste o bloco \n aqui "
 	slot2.get_node("VBoxContainer/DropArea/Label").visible = true
 	
 	bloco1.get_node("Label").text = blocks[0]
@@ -127,7 +127,7 @@ func hide_bloco(block_text: String):
 
 func _open_reference():
 	var ref_screen = get_tree().get_first_node_in_group("reference_screen")
-	ref_screen.reopen()
+	ref_screen.open("dica_1")
 func fade_in():
 	var tw = create_tween()
 	tw.tween_property(puzzle_screen, "modulate:a", 0.8, 0.7)
