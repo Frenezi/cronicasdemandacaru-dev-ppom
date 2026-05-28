@@ -58,6 +58,7 @@ func setup(question: String, answers: Array, blocks: Array, callback: Callable):
 	fade_in()
 
 func _ready():
+	$ColorRect/Panel/BotaoReset.pressed.connect(_reset_slots)
 	$ColorRect/Panel/BotaoReferencia.pressed.connect(_open_reference)
 	add_to_group("puzzle_layer")
 	btn.connect("pressed", Callable(self, "_on_confirm"))

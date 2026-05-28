@@ -18,26 +18,25 @@ var typing_speed = 0.05  # tempo entre cada letra em segundos
 var typing_timer = 0.0
 
 var dialogs_before = [
-	"Voce nao parece ser daqui...",
-	"VOCE DEVE SER O INVASOR!!!!!",
-	"Veremos se é esperto mesmo...",
-	"Sabe responder uma pergunta...",
-	"EM PYTHON!?"
+	"Como voce chegou aqui!?",
+	"Não lembro abrir a porta...",
+	"Se voce for um dos funcionários",
+	"Conseguirá responder essa pergunta!",
+	"(Eu devo estar ficando meio velho...)"
 ]
 
 var dialogs_after = [
-	"Voce é bom mesmo hein...",
-	"Me escute",
-	"Verá uma porta aberta a frente",
-	"Duvido que ganhe meu chefe!",
-	"Ops! Acho que falei demais."
+	"Muito inteligente voce",
+	"Acho que nem eu conseguiria responder...",
+	"Cof.. Cof...",
+	"Muito bem, sinta-se em casa"
 ]
 
 var dialogs_repeat = [
-	"Xispa daqui",
-	"Se voce ir a direita",
-	"Entre numa caverna",
-	"Deve estar aberta agora..."
+	"Que fome...",
+	"Aquele tamanduá parecia delicioso...",
+	"OPA! ainda está aqui amigo?",
+	"Tem uma passagem a cima, tome um ar!"
 ]
 var dialog_finished = false
 @onready var interact_hint = $InteractHint
@@ -84,7 +83,7 @@ func _check_and_start_dialog():
 		interact_hint.visible = false
 		dialog_bubble.visible = true
 		get_tree().paused = true
-		show_dialog("Fale comigo depois de aprender variáveis¬")
+		show_dialog("Ei! Antes de começar, vai lá pegar o papel que deixei na mesa.")
 		return
 	# tem papel — fluxo normal
 	start_dialog()
@@ -137,7 +136,7 @@ func advance_dialog():
 				get_tree().paused = false
 				if not puzzle_started:
 					puzzle_started = true
-					Puzzle.start_puzzle("notebook_2", self)
+					Puzzle.start_puzzle("notebook_1", self) 
 				return
 			show_dialog(dialogs_before[dialog_index])
 		else:
@@ -179,6 +178,7 @@ func end_dialog_repeat():
 
 
 func _on_area_2d_body_entered(body):
+	print("BUGSAUR ENTROU: ", body.name)
 	if body.is_in_group("player"):
 		player_ref = body
 		player_nearby = true

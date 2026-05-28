@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://c7g3krscon85k"]
+
+[ext_resource type="PackedScene" uid="uid://cbkrgs0mhce1a" path="res://Scene/Serra.tscn" id="1_tu0xs"]
+
+[node name="Forest" instance=ExtResource("1_tu0xs")]
+
+[editable path="Level End"]
+[editable path="Player"]
+[editable path="Transition"]
+[editable path="bugzin"]
+[editable path="niede"]
+[editable path="CanvasLayer"]
+[editable path="bugsaur"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bis0lg31sw5dn"]
+[gd_scene load_steps=14 format=3 uid="uid://bis0lg31sw5dn"]
 
 [ext_resource type="Script" uid="uid://d4ganpjy4kx6" path="res://Script/puzzle_layer.gd" id="1_df3t2"]
 [ext_resource type="Texture2D" uid="uid://3vm1catvamfu" path="res://Sprites/botões/puzzle.png" id="2_4lub5"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://dy7e06q0ovswx" path="res://Script/slot.gd" id="3_jfs2m"]
 [ext_resource type="Script" uid="uid://bo3uqji2pocal" path="res://Script/block.gd" id="4_44sd5"]
 [ext_resource type="Script" uid="uid://fpc7xellwk1j" path="res://Script/drop_area.gd" id="4_jk22c"]
+[ext_resource type="StyleBox" uid="uid://ctb05ydeusnyp" path="res://Theme/style_box.tres" id="8_vsk1x"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jk22c"]
 
@@ -58,10 +59,6 @@ corner_radius_top_right = 6
 corner_radius_bottom_right = 6
 corner_radius_bottom_left = 6
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b2kpe"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_05olu"]
-
 [node name="puzzle_layer" type="CanvasLayer"]
 process_mode = 3
 script = ExtResource("1_df3t2")
@@ -111,7 +108,7 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = 277.5
-offset_top = -279.99988
+offset_top = -259.99988
 offset_right = 690.8334
 offset_bottom = -199.99988
 grow_horizontal = 2
@@ -128,10 +125,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 452.5
-offset_top = -134.99988
-offset_right = 630.5
-offset_bottom = -94.99988
+offset_left = 292.50012
+offset_top = -159.99988
+offset_right = 695.8334
+offset_bottom = -106.666565
 grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(1.5, 1.5)
@@ -198,7 +195,7 @@ layout_mode = 0
 offset_top = 14.999996
 offset_right = 121.0
 offset_bottom = 37.999996
-text = "g"
+text = "q"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -321,8 +318,11 @@ offset_right = -244.99988
 offset_bottom = 106.66667
 grow_horizontal = 0
 scale = Vector2(3, 3)
-theme_override_styles/normal = SubResource("StyleBoxEmpty_b2kpe")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_05olu")
+theme_override_colors/font_pressed_color = Color(0.9254902, 0.9019608, 0.3019608, 1)
+theme_override_colors/font_hover_color = Color(0.9254902, 0.9019608, 0.3019608, 1)
+theme_override_styles/normal = ExtResource("8_vsk1x")
+theme_override_styles/pressed = ExtResource("8_vsk1x")
+theme_override_styles/hover = ExtResource("8_vsk1x")
 text = "DICA"
 
 [node name="Titulo" type="Label" parent="ColorRect/Panel"]
@@ -335,3 +335,21 @@ theme_override_font_sizes/font_size = 65
 text = "CRONICAS DE MANDACARU "
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="BotaoReset" type="Button" parent="ColorRect/Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 277.50012
+offset_top = -164.99988
+offset_right = 690.8335
+offset_bottom = -104.99988
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(1.5, 1.5)
+theme_override_fonts/font = ExtResource("2_x708r")
+text = "Limpar blocos"
+flat = true

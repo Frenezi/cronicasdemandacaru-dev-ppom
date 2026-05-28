@@ -30,7 +30,9 @@ func reopen():
 
 func _close():
 	papiro.visible = false
-	get_tree().paused = false
+	# só despausa se o puzzle não estiver aberto
+	if get_tree().get_first_node_in_group("puzzle_layer") == null:
+		get_tree().paused = false
 
 func _process(_delta):
 	if papiro.visible and Input.is_action_just_pressed("cancel"):

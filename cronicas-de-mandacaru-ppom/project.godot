@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Cronicas de Mandacaru PPOM - FORK - BRUNO - OFICIAL"
+config/name="Cronicas de Mandacaru"
 run/main_scene="uid://ceurjiyfeljuy"
 config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://icon.svg"

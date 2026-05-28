@@ -1,53 +1,40 @@
-[gd_scene load_steps=6 format=3 uid="uid://tdh6dhpiejto"]
+[gd_scene load_steps=4 format=3 uid="uid://tdh6dhpiejto"]
 
 [ext_resource type="Script" uid="uid://xiqwrvj4jynr" path="res://Script/progress_bar.gd" id="1_0j5km"]
+[ext_resource type="Texture2D" uid="uid://drflc16ae8lq2" path="res://Sprites/All 16x16 Health Heart Sets/16x16 Heart Health Red.png" id="2_lpjjl"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lpjjl"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_154tk"]
+atlas = ExtResource("2_lpjjl")
+region = Rect2(2, 2, 13, 11)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_154tk"]
-bg_color = Color(0.13563985, 0.6898909, 0.6265779, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lt47v"]
-bg_color = Color(0.17037651, 0.1987589, 0.18611732, 1)
-expand_margin_left = 1.0
-expand_margin_top = 1.0
-expand_margin_right = 1.0
-expand_margin_bottom = 1.0
-shadow_color = Color(0, 0, 0, 0.2784314)
-shadow_offset = Vector2(0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lnfx5"]
-bg_color = Color(1, 1, 1, 1)
-
-[node name="HealthBar" type="ProgressBar"]
+[node name="HealthBar" type="HBoxContainer"]
 z_index = 1
 offset_right = 240.0
 offset_bottom = 4.0
-theme_override_styles/background = SubResource("StyleBoxEmpty_lpjjl")
-theme_override_styles/fill = SubResource("StyleBoxFlat_154tk")
-max_value = 10.0
-step = 1.0
-value = 5.0
-show_percentage = false
 script = ExtResource("1_0j5km")
-
-[node name="DamageBar" type="ProgressBar" parent="."]
-z_index = -1
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/background = SubResource("StyleBoxFlat_lt47v")
-theme_override_styles/fill = SubResource("StyleBoxFlat_lnfx5")
-max_value = 5.0
-step = 1.0
-value = 5.0
-show_percentage = false
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.4
 one_shot = true
+
+[node name="Coracao1" type="TextureRect" parent="."]
+layout_mode = 2
+texture = SubResource("AtlasTexture_154tk")
+
+[node name="Coracao2" type="TextureRect" parent="."]
+layout_mode = 2
+texture = SubResource("AtlasTexture_154tk")
+
+[node name="Coracao3" type="TextureRect" parent="."]
+layout_mode = 2
+texture = SubResource("AtlasTexture_154tk")
+
+[node name="Coracao4" type="TextureRect" parent="."]
+layout_mode = 2
+texture = SubResource("AtlasTexture_154tk")
+
+[node name="Coracao5" type="TextureRect" parent="."]
+layout_mode = 2
+texture = SubResource("AtlasTexture_154tk")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

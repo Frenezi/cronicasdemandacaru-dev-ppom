@@ -9,6 +9,7 @@ const GameOverScreen = preload("uid://r32ycnp1u604")
 var health: int = 6:
 	set = _set_health
 var game_over_screen_ref: CanvasLayer = null
+var hurt_cooldown = false
 
 enum PlayerState {
 	idle,
@@ -48,6 +49,10 @@ func _physics_process(delta: float) -> void:
 	if get_tree().paused or blocked:
 		$AnimatedSprite2D.play("idle")
 		return
+	for area in $HITBOX.get_overlapping_bodies():
+		if area.is_in_group("lethal_area") and not hurt_cooldown:
+			go_to_hurt_state()
+			break
 	if Input.is_action_pressed("down"):
 		set_collision_mask_value(8, false)
 	else:
@@ -105,6 +110,7 @@ func go_to_dead_state():
 func go_to_hurt_state():
 	if status == PlayerState.hurt or status == PlayerState.dead:
 		return
+	hurt_cooldown = true
 	health -= 1
 	status = PlayerState.hurt
 	anim.play("hurt")
@@ -112,6 +118,7 @@ func go_to_hurt_state():
 	await get_tree().create_timer(0.25).timeout
 	if status == PlayerState.dead:
 		return
+	hurt_cooldown = false  # ← reseta depois do tempo de invencibilidade
 	if is_on_floor():
 		if abs(velocity.x) < 1:
 			go_to_idle_state()
@@ -198,15 +205,7 @@ func update_direction():
 	elif direction > 0:
 		anim.flip_h = false
 
-func _on_hitbox_body_entered(body: Node2D) -> void:
-	death_on_jump_counter += 1
-	if body.is_in_group("lethal_area") && death_on_jump_counter == 1:
-		go_to_hurt_state()
-		return
 
-func hit_lethalarea(_area: Area2D):
-	go_to_hurt_state()
-	return
 
 func _on_reload_timer_timeout() -> void:
 	if game_over_screen_ref:
