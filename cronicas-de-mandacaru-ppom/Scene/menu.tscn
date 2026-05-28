@@ -1,305 +1,11 @@
-[gd_scene load_steps=72 format=3 uid="uid://ceurjiyfeljuy"]
+[gd_scene load_steps=7 format=3 uid="uid://ceurjiyfeljuy"]
 
 [ext_resource type="Script" uid="uid://bncnklakyl3hv" path="res://Script/menu.gd" id="1_eas8t"]
-[ext_resource type="Texture2D" uid="uid://c6thsi6b0s52y" path="res://Sprites/BACKGROUNDS/menu.png" id="2_8rqvv"]
-[ext_resource type="FontFile" uid="uid://cg7nmsrpxuvmx" path="res://fonts/determination.ttf" id="2_u2k45"]
-[ext_resource type="Texture2D" uid="uid://b00pn8jsjtg3u" path="res://Sprites/HOBBIT/DEATH/Hobbit - death1.png" id="14_5t1yb"]
-[ext_resource type="Texture2D" uid="uid://b35pqsf2cmef0" path="res://Sprites/HOBBIT/DEATH/Hobbit - death2.png" id="15_f8ahi"]
-[ext_resource type="Texture2D" uid="uid://b32f4oxptmwgf" path="res://Sprites/HOBBIT/DEATH/Hobbit - death3.png" id="16_68jqx"]
-[ext_resource type="Texture2D" uid="uid://we42kbrps3u7" path="res://Sprites/HOBBIT/DEATH/Hobbit - death4.png" id="17_fvilk"]
-[ext_resource type="Texture2D" uid="uid://2ukwlp15qhy0" path="res://Sprites/HOBBIT/DEATH/Hobbit - death5.png" id="18_pban3"]
-[ext_resource type="Texture2D" uid="uid://u1u1vslivou1" path="res://Sprites/Tamanduá/Parado/parado1.png" id="19_c36xq"]
-[ext_resource type="Texture2D" uid="uid://byiogqph0y8p6" path="res://Sprites/HOBBIT/DEATH/Hobbit - death6.png" id="19_ebnbq"]
-[ext_resource type="Texture2D" uid="uid://qacyw62g8rjj" path="res://Sprites/HOBBIT/DEATH/Hobbit - death7.png" id="20_bgqus"]
-[ext_resource type="Texture2D" uid="uid://ccr4ms3yohvjf" path="res://Sprites/Tamanduá/Parado/parado2.png" id="20_jsa40"]
-[ext_resource type="Texture2D" uid="uid://bjqo7mkmjmgjc" path="res://Sprites/Tamanduá/Parado/parado3.png" id="21_8rqvv"]
-[ext_resource type="Texture2D" uid="uid://b3n1gxn6d364" path="res://Sprites/HOBBIT/DEATH/Hobbit - death8.png" id="21_o8slv"]
-[ext_resource type="Texture2D" uid="uid://de86jrvd6v3de" path="res://Sprites/HOBBIT/DEATH/Hobbit - death9.png" id="22_83mb4"]
-[ext_resource type="Texture2D" uid="uid://cpib12ngbqva0" path="res://Sprites/HOBBIT/DEATH/Hobbit - death10.png" id="23_s34pe"]
-[ext_resource type="Texture2D" uid="uid://b1b08qo5f41ey" path="res://Sprites/HOBBIT/DEATH/Hobbit - death11.png" id="24_xp4yq"]
-[ext_resource type="Texture2D" uid="uid://cqli1hpsec786" path="res://Sprites/HOBBIT/DEATH/Hobbit - death12.png" id="25_n5ig5"]
-[ext_resource type="Texture2D" uid="uid://bca3o78u2ird8" path="res://Sprites/HOBBIT/HIT/Hobbit - hit1.png" id="26_ab4hq"]
-[ext_resource type="Texture2D" uid="uid://dt72bcl46wtp7" path="res://Sprites/HOBBIT/HIT/Hobbit - hit2.png" id="27_5yfru"]
-[ext_resource type="Texture2D" uid="uid://dky34yul6dd5v" path="res://Sprites/HOBBIT/HIT/Hobbit - hit3.png" id="28_cp3up"]
-[ext_resource type="Texture2D" uid="uid://c3sexhtwhfmxv" path="res://Sprites/HOBBIT/HIT/Hobbit - hit4.png" id="29_ahslo"]
-[ext_resource type="Texture2D" uid="uid://llh48b3mt7n2" path="res://Sprites/HOBBIT/JUMP/Hobbit - jumpt1.png" id="34_uwt1r"]
-[ext_resource type="Texture2D" uid="uid://cmoogcw38te8r" path="res://Sprites/HOBBIT/JUMP/Hobbit - jumpt2.png" id="35_61olt"]
-[ext_resource type="Texture2D" uid="uid://db1anhrm5jp5v" path="res://Sprites/HOBBIT/JUMP/Hobbit - jumpt3.png" id="36_bqmv8"]
-[ext_resource type="Texture2D" uid="uid://bdjgsfjv3k6f2" path="res://Sprites/HOBBIT/JUMP/Hobbit - jumpt4.png" id="37_g31pv"]
+[ext_resource type="Texture2D" uid="uid://b3dkq623w0f6a" path="res://Sprites/BACKGROUNDS/fundos.jpeg" id="2_6hgn1"]
+[ext_resource type="Texture2D" uid="uid://r15h4bd6nyo0" path="res://Sprites/botões/bt_play.png" id="4_fyf5i"]
+[ext_resource type="Texture2D" uid="uid://dpialfh6qfyxo" path="res://Sprites/botões/bt_opcs.png" id="5_k52wo"]
+[ext_resource type="Texture2D" uid="uid://bpnupsuqa4dgn" path="res://Sprites/botões/bt_sair.png" id="6_ddci3"]
 [ext_resource type="Texture2D" uid="uid://cqmx2wjb757nt" path="res://Sprites/BACKGROUNDS/logo.png" id="37_xv7ii"]
-[ext_resource type="Texture2D" uid="uid://yg6mlaauw03r" path="res://Sprites/HOBBIT/RUN/Hobbit - run1.png" id="38_jxo6x"]
-[ext_resource type="Texture2D" uid="uid://darc1xja4qbs0" path="res://Sprites/HOBBIT/RUN/Hobbit - run2.png" id="39_s6nec"]
-[ext_resource type="Texture2D" uid="uid://bf4b0h170t565" path="res://Sprites/HOBBIT/RUN/Hobbit - run3.png" id="40_ude8o"]
-[ext_resource type="Texture2D" uid="uid://j5vryg23mnuv" path="res://Sprites/HOBBIT/RUN/Hobbit - run4.png" id="41_uw7rb"]
-[ext_resource type="Texture2D" uid="uid://yuturlids2nn" path="res://Sprites/HOBBIT/RUN/Hobbit - run5.png" id="42_wslrh"]
-[ext_resource type="Texture2D" uid="uid://cvvaqqbnajsj8" path="res://Sprites/HOBBIT/RUN/Hobbit - run6.png" id="43_tibog"]
-[ext_resource type="Texture2D" uid="uid://bviwx7poq1wlt" path="res://Sprites/HOBBIT/RUN/Hobbit - run7.png" id="44_mqp4a"]
-[ext_resource type="Texture2D" uid="uid://df4btf0vuy234" path="res://Sprites/HOBBIT/RUN/Hobbit - run8.png" id="45_wteef"]
-[ext_resource type="Texture2D" uid="uid://bsv7imj7duqgd" path="res://Sprites/HOBBIT/RUN/Hobbit - run9.png" id="46_fvppf"]
-[ext_resource type="Texture2D" uid="uid://dv08g3p12u24g" path="res://Sprites/HOBBIT/RUN/Hobbit - run10.png" id="47_sw85d"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7x646"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_45on0"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_is18v"]
-atlas = ExtResource("14_5t1yb")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bp1bk"]
-atlas = ExtResource("15_f8ahi")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_x2tvf"]
-atlas = ExtResource("16_68jqx")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_45u4k"]
-atlas = ExtResource("17_fvilk")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_y4qe1"]
-atlas = ExtResource("18_pban3")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ccdvw"]
-atlas = ExtResource("19_ebnbq")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yx8b5"]
-atlas = ExtResource("20_bgqus")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jma00"]
-atlas = ExtResource("21_o8slv")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xkrc4"]
-atlas = ExtResource("22_83mb4")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rwjqm"]
-atlas = ExtResource("23_s34pe")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7e56c"]
-atlas = ExtResource("24_xp4yq")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_kmefs"]
-atlas = ExtResource("25_n5ig5")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yij14"]
-atlas = ExtResource("26_ab4hq")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_voruf"]
-atlas = ExtResource("27_5yfru")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_dtkf1"]
-atlas = ExtResource("28_cp3up")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hmnes"]
-atlas = ExtResource("29_ahslo")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_e45uk"]
-atlas = ExtResource("34_uwt1r")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ud54e"]
-atlas = ExtResource("35_61olt")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_iudwg"]
-atlas = ExtResource("36_bqmv8")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rw12f"]
-atlas = ExtResource("37_g31pv")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_egchw"]
-atlas = ExtResource("38_jxo6x")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ykqge"]
-atlas = ExtResource("39_s6nec")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_sn2x3"]
-atlas = ExtResource("40_ude8o")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_y10x8"]
-atlas = ExtResource("41_uw7rb")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1sc42"]
-atlas = ExtResource("42_wslrh")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0t50q"]
-atlas = ExtResource("42_wslrh")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5qcl2"]
-atlas = ExtResource("43_tibog")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1w6s4"]
-atlas = ExtResource("44_mqp4a")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yb7tu"]
-atlas = ExtResource("45_wteef")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_b338v"]
-atlas = ExtResource("46_fvppf")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_i1mej"]
-atlas = ExtResource("47_sw85d")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_fwkbm"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_is18v")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bp1bk")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_x2tvf")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_45u4k")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_y4qe1")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ccdvw")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_yx8b5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jma00")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xkrc4")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_rwjqm")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7e56c")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_kmefs")
-}],
-"loop": false,
-"name": &"dead",
-"speed": 8.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"falling",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_yij14")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_voruf")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_dtkf1")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hmnes")
-}],
-"loop": true,
-"name": &"hurt",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("19_c36xq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("20_jsa40")
-}, {
-"duration": 1.0,
-"texture": ExtResource("21_8rqvv")
-}],
-"loop": true,
-"name": &"idle",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_e45uk")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ud54e")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_iudwg")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_rw12f")
-}],
-"loop": false,
-"name": &"jump",
-"speed": 11.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_egchw")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ykqge")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_sn2x3")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_y10x8")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1sc42")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0t50q")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5qcl2")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1w6s4")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_yb7tu")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_b338v")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_i1mej")
-}],
-"loop": true,
-"name": &"walk",
-"speed": 10.0
-}]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -317,63 +23,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_8rqvv")
+texture = ExtResource("2_6hgn1")
 expand_mode = 3
 stretch_mode = 6
-
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.485
-anchor_top = 0.375
-anchor_right = 0.485
-anchor_bottom = 0.375
-offset_right = 256.0
-offset_bottom = 132.0
-mouse_filter = 0
-metadata/_edit_use_anchors_ = true
-
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-alignment = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
-layout_mode = 2
-mouse_filter = 0
-
-[node name="Play" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer" groups=["button"]]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("2_u2k45")
-theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_7x646")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_45on0")
-text = "PLAY"
-flat = true
-
-[node name="Options" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer" groups=["button"]]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("2_u2k45")
-theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_7x646")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_45on0")
-text = "OPÕÇÕES"
-flat = true
-
-[node name="Sair" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer" groups=["button"]]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("2_u2k45")
-theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_7x646")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_45on0")
-text = "SAIR"
-flat = true
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-z_index = 2
-position = Vector2(113, 172)
-scale = Vector2(1.6, 1.375)
-sprite_frames = SubResource("SpriteFrames_fwkbm")
-animation = &"idle"
-autoplay = "idle"
 
 [node name="logo" type="TextureRect" parent="."]
 layout_mode = 0
@@ -383,3 +35,30 @@ offset_right = 385.44772
 offset_bottom = 74.0
 texture = ExtResource("37_xv7ii")
 expand_mode = 3
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 278.00003
+offset_top = 81.0
+offset_right = 534.0
+offset_bottom = 145.0
+scale = Vector2(0.35, 0.35)
+texture_normal = ExtResource("4_fyf5i")
+
+[node name="TextureButton2" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 278.0
+offset_top = 118.0
+offset_right = 534.0
+offset_bottom = 182.0
+scale = Vector2(0.35, 0.35)
+texture_normal = ExtResource("5_k52wo")
+
+[node name="TextureButton3" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 278.0
+offset_top = 154.0
+offset_right = 534.0
+offset_bottom = 218.0
+scale = Vector2(0.35, 0.35)
+texture_normal = ExtResource("6_ddci3")

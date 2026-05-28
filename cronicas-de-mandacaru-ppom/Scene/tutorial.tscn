@@ -67,6 +67,7 @@ tile_map_data = PackedByteArray("AABfACUAAgAAAAAAAAAAAO//AwAAAAIAAAAAAPD/AwAAAAM
 tile_set = ExtResource("5_r3him")
 
 [node name="Level End" parent="." instance=ExtResource("6_4cpsy")]
+script = null
 
 [node name="CollisionShape2D" parent="Level End" index="0"]
 z_index = 1

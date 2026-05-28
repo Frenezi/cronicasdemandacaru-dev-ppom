@@ -33,7 +33,7 @@ var death_on_jump_counter: float = 0
 var blocked = false
 
 func _ready() -> void:
-	health = 5
+	health = 5000
 	go_to_idle_state()
 	healthbar.ini_health(health)
 	anim.connect("frame_changed", Callable(self, "_on_anim_frame_changed"))
@@ -110,15 +110,31 @@ func go_to_dead_state():
 func go_to_hurt_state():
 	if status == PlayerState.hurt or status == PlayerState.dead:
 		return
+	if hurt_cooldown:
+		return
 	hurt_cooldown = true
 	health -= 1
 	status = PlayerState.hurt
 	anim.play("hurt")
 	velocity.y = -200
+	
+	modulate = Color(1, 1, 1, 1)
+	var tween = create_tween()
+	tween.tween_property(self, "modulate", Color(10, 10, 10, 1), 0.05)
+	tween.tween_property(self, "modulate", Color(1, 1, 1, 1), 0.05)
+	
 	await get_tree().create_timer(0.25).timeout
 	if status == PlayerState.dead:
 		return
-	hurt_cooldown = false  # ← reseta depois do tempo de invencibilidade
+	status = PlayerState.idle
+	
+	var piscar = create_tween().set_loops(8)
+	piscar.tween_property(self, "modulate:a", 0.2, 0.15)
+	piscar.tween_property(self, "modulate:a", 1.0, 0.15)
+	await get_tree().create_timer(2.5).timeout
+	modulate.a = 1.0
+	
+	hurt_cooldown = false
 	if is_on_floor():
 		if abs(velocity.x) < 1:
 			go_to_idle_state()
@@ -126,7 +142,6 @@ func go_to_hurt_state():
 			go_to_walk_state()
 	else:
 		go_to_falling_state()
-
 func idle_state(delta:):
 	move(delta)
 	apply_gravity(delta)

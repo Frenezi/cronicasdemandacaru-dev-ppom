@@ -24,7 +24,7 @@ animations = [{
 "texture": ExtResource("4_xx2fk")
 }],
 "loop": true,
-"name": &"idle",
+"name": &"parado",
 "speed": 5.0
 }]
 

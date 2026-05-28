@@ -1,46 +1,128 @@
-[gd_scene load_steps=6 format=3 uid="uid://ced5qoogafj14"]
+[gd_scene load_steps=9 format=3 uid="uid://ced5qoogafj14"]
 
 [ext_resource type="Script" uid="uid://gpxyg42uh3ao" path="res://Script/reference_screen.gd" id="1_o78fa"]
-[ext_resource type="Texture2D" uid="uid://mym4p6tivwbh" path="res://Sprites/papiros/dica_1.png" id="2_qymq6"]
-[ext_resource type="Texture2D" uid="uid://bvb1a42f8wdab" path="res://Sprites/Teclado/ESC.png" id="3_7ks87"]
-[ext_resource type="Texture2D" uid="uid://wrpfcj0jqfwg" path="res://Sprites/Teclado/ESC press.png" id="4_bbos2"]
-[ext_resource type="Theme" uid="uid://dgux3yr2s64nn" path="res://Theme/puzzle_theme.tres" id="5_bbos2"]
+[ext_resource type="Texture2D" uid="uid://cfu2jr3uxxslg" path="res://Sprites/botões/fundopapiro.png" id="2_tknrb"]
+[ext_resource type="Texture2D" uid="uid://bgii6cv5evikn" path="res://Sprites/botões/test_papiro.png" id="4_7ks87"]
+[ext_resource type="Texture2D" uid="uid://dgk76iwwl3o6e" path="res://Sprites/botões/test_papiro2.png" id="4_tknrb"]
+[ext_resource type="Texture2D" uid="uid://bb4ywwffxoktv" path="res://dicas/dica_1.png" id="5_bbos2"]
+
+[sub_resource type="Animation" id="Animation_bbos2"]
+resource_name = "abrindo"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("layer/TextureRect/TextureRect2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.85),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-2262.3376, -1.8835068e-05), Vector2(-2611.57, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("layer/TextureRect:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(-0.033333335, 0.85),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-229.87, -57.429), Vector2(-11.688299, -57.428574)]
+}
+
+[sub_resource type="Animation" id="Animation_tknrb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("layer/TextureRect/TextureRect2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-2262.3376, -1.8835068e-05)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("layer/TextureRect:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-229.87013, -0.28573465)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_r78ak"]
+_data = {
+&"RESET": SubResource("Animation_tknrb"),
+&"abrindo": SubResource("Animation_bbos2")
+}
 
 [node name="CanvasLayer" type="CanvasLayer" groups=["reference_screen"]]
 process_mode = 3
 script = ExtResource("1_o78fa")
 metadata/_edit_vertical_guides_ = [82.0, 315.0]
 
-[node name="TextureRect" type="TextureRect" parent="."]
-offset_left = 84.99999
-offset_top = 49.999996
-offset_right = 2360.0
-offset_bottom = 1150.0
-scale = Vector2(0.1, 0.1)
+[node name="layer" type="TextureRect" parent="."]
+offset_left = 349.0
+offset_top = -323.78
+offset_right = 2624.0
+offset_bottom = 776.22
+scale = Vector2(0.77, 0.77)
 size_flags_horizontal = 0
 size_flags_vertical = 8
-texture = ExtResource("2_qymq6")
 stretch_mode = 5
 
-[node name="TextureButton" type="TextureButton" parent="TextureRect"]
+[node name="TextureRect" type="TextureRect" parent="layer"]
 layout_mode = 0
-offset_left = 2310.0
-offset_top = -139.99997
-offset_right = 2326.0
-offset_bottom = -123.99997
-scale = Vector2(10, 10)
-texture_normal = ExtResource("3_7ks87")
-texture_pressed = ExtResource("4_bbos2")
+offset_left = -11.688293
+offset_top = -57.428574
+offset_right = 2263.3118
+offset_bottom = 1042.5714
+scale = Vector2(1.1, 1.1)
+size_flags_horizontal = 0
+size_flags_vertical = 8
+texture = ExtResource("4_7ks87")
+stretch_mode = 5
 
-[node name="Label" type="Label" parent="TextureRect"]
+[node name="TextureRect2" type="TextureRect" parent="layer/TextureRect"]
 layout_mode = 0
-offset_left = 360.00006
-offset_top = 420.00003
-offset_right = 513.00006
-offset_bottom = 445.00003
-scale = Vector2(10, 10)
-theme = ExtResource("5_bbos2")
-text = "Voce aprendeu: 
-Variáveis!"
-horizontal_alignment = 1
-vertical_alignment = 1
+offset_left = -2611.57
+offset_right = -336.57007
+offset_bottom = 1100.0
+size_flags_horizontal = 0
+size_flags_vertical = 8
+texture = ExtResource("4_tknrb")
+stretch_mode = 5
+
+[node name="fundo" type="TextureRect" parent="layer"]
+z_index = -1
+layout_mode = 0
+offset_left = -453.24673
+offset_top = 412.7013
+offset_right = 58.753265
+offset_bottom = 703.61035
+texture = ExtResource("2_tknrb")
+
+[node name="dica" type="TextureRect" parent="layer"]
+z_index = -1
+layout_mode = 0
+offset_left = -358.44156
+offset_top = 417.89612
+offset_right = 895.5585
+offset_bottom = 1671.8961
+scale = Vector2(0.22, 0.22)
+texture = ExtResource("5_bbos2")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_r78ak")
+}

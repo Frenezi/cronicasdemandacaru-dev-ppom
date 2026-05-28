@@ -1,19 +1,25 @@
 extends CanvasLayer
 
-@onready var papiro = $TextureRect
-@onready var close_button = $TextureRect/TextureButton
+@onready var papiro = $layer
+@onready var anim = $AnimationPlayer
 
 var current_id: String = ""
-
 var papiros = {
 	"dica_1": preload("res://Sprites/papiros/dica_1.png"),
-	#"dica_2": preload("res://Sprites/papiros/dica_2.png"),
 }
 
 func _ready():
+	process_mode = Node.PROCESS_MODE_ALWAYS
 	add_to_group("reference_screen")
 	papiro.visible = false
-	close_button.pressed.connect(_close)
+
+func _input(event):
+	if not papiro.visible:
+		return
+	if event is InputEventKey and event.pressed and event.keycode == KEY_E:
+		_close()
+	if event.is_action_pressed("cancel"):
+		_close()
 
 func open(reference_id: String):
 	current_id = reference_id
@@ -22,6 +28,7 @@ func open(reference_id: String):
 		return
 	papiro.texture = texture
 	papiro.visible = true
+	anim.play("abrindo")
 	get_tree().paused = true
 
 func reopen():
@@ -30,10 +37,5 @@ func reopen():
 
 func _close():
 	papiro.visible = false
-	# só despausa se o puzzle não estiver aberto
 	if get_tree().get_first_node_in_group("puzzle_layer") == null:
 		get_tree().paused = false
-
-func _process(_delta):
-	if papiro.visible and Input.is_action_just_pressed("cancel"):
-		_close()

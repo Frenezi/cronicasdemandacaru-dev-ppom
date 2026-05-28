@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6thsi6b0s52y"
-path="res://.godot/imported/menu.png-a8ca0df42bacb4a0188ada8a84a32525.ctex"
+uid="uid://bgii6cv5evikn"
+path="res://.godot/imported/test_papiro.png-bbe09fbec73b5da5c62eb775358f56d0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/BACKGROUNDS/menu.png"
-dest_files=["res://.godot/imported/menu.png-a8ca0df42bacb4a0188ada8a84a32525.ctex"]
+source_file="res://Sprites/botões/test_papiro.png"
+dest_files=["res://.godot/imported/test_papiro.png-bbe09fbec73b5da5c62eb775358f56d0.ctex"]
 
 [params]
 

@@ -14,7 +14,7 @@ var full_text = ""
 var current_text = ""
 var char_index = 0
 var typing = false
-var typing_speed = 0.05  # tempo entre cada letra em segundos
+var typing_speed = 0.05  
 var typing_timer = 0.0
 
 var dialogs_before = [
@@ -154,7 +154,7 @@ func show_dialog(text: String):
 	
 
 func start_post_puzzle_dialog():
-	if puzzle_done:  # ← se já completou, não abre de novo
+	if puzzle_done: 
 		return
 	var blocker = get_tree().get_first_node_in_group("blocker_tiles")
 	if blocker:

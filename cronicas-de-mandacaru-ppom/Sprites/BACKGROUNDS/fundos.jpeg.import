@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c470inpyg23bi"
-path="res://.godot/imported/dica_1.png-0dd9edef494b5599acc817460b385feb.ctex"
+uid="uid://b3dkq623w0f6a"
+path="res://.godot/imported/fundos.jpeg-2c202a3a8ca11292d997e8f5e5f545a9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/papiros/dica_1.png"
-dest_files=["res://.godot/imported/dica_1.png-0dd9edef494b5599acc817460b385feb.ctex"]
+source_file="res://Sprites/BACKGROUNDS/fundos.jpeg"
+dest_files=["res://.godot/imported/fundos.jpeg-2c202a3a8ca11292d997e8f5e5f545a9.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c470inpyg23bi"
-path="res://.godot/imported/dica_1.png-0dd9edef494b5599acc817460b385feb.ctex"
+uid="uid://dgk76iwwl3o6e"
+path="res://.godot/imported/test_papiro2.png-26474a68970f4a4428cdbfb3a1f7e10e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/papiros/dica_1.png"
-dest_files=["res://.godot/imported/dica_1.png-0dd9edef494b5599acc817460b385feb.ctex"]
+source_file="res://Sprites/botões/test_papiro2.png"
+dest_files=["res://.godot/imported/test_papiro2.png-26474a68970f4a4428cdbfb3a1f7e10e.ctex"]
 
 [params]
 

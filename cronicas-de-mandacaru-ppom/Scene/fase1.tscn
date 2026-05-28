@@ -20,7 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://6q3jcuaj4htk" path="res://Scene/niedev2.tscn" id="17_6mb5u"]
 [ext_resource type="PackedScene" uid="uid://dljkwum6ebndc" path="res://entities/bugzin.tscn" id="17_upwnu"]
 [ext_resource type="PackedScene" uid="uid://mcru88n4xcjf" path="res://entities/niede.tscn" id="18_hl50m"]
-[ext_resource type="Script" uid="uid://bljswrtq6jcxo" path="res://Script/cave_zone.gd" id="19_1e345"]
+[ext_resource type="Script" path="res://Script/cave_zone.gd" id="19_1e345"]
 [ext_resource type="PackedScene" uid="uid://cj655tmrv5p38" path="res://Scene/paper.tscn" id="21_mis3q"]
 [ext_resource type="PackedScene" uid="uid://ced5qoogafj14" path="res://Scene/reference_screen.tscn" id="22_05dq7"]
 
@@ -636,7 +636,9 @@ shape = SubResource("RectangleShape2D_3tkwh")
 position = Vector2(1651, 165)
 
 [node name="AnimatedSprite2D" parent="bugzin" index="0"]
+animation = &"parado"
 autoplay = "idle"
+frame_progress = 0.0
 
 [node name="Area2D" parent="bugzin" index="1"]
 collision_layer = 0
@@ -649,7 +651,6 @@ justification_flags = 171
 [node name="KeyHint" parent="bugzin/DialogBubble/Panel" index="1"]
 process_mode = 3
 position = Vector2(73, 54)
-autoplay = "default"
 
 [node name="niede" parent="." instance=ExtResource("18_hl50m")]
 z_index = 3
@@ -672,7 +673,6 @@ offset_right = 72.0
 
 [node name="KeyHint" parent="niede/DialogBubble/Panel" index="1"]
 position = Vector2(105, 55)
-autoplay = "default"
 frame_progress = 0.5809453
 
 [node name="Cave_zone" type="Area2D" parent="."]

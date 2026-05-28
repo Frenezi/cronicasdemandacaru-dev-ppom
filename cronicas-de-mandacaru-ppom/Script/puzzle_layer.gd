@@ -128,7 +128,7 @@ func hide_bloco(block_text: String):
 
 func _open_reference():
 	var ref_screen = get_tree().get_first_node_in_group("reference_screen")
-	ref_screen.open("dica_1")
+	ref_screen.open("dica_2")
 func fade_in():
 	var tw = create_tween()
 	tw.tween_property(puzzle_screen, "modulate:a", 0.8, 0.7)

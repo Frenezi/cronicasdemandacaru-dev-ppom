@@ -27,11 +27,11 @@ var puzzles = {
 	"notebook_1": {
 		"question": "Print, um comando de saída!",
 		"slot_labels": [
-			"--> EU QUERO UM BLOCO QUE MOSTRE: Ana ",
+			"--> EU QUERO UM BLOCO QUE MOSTRE: Miguel ",
             "--> EU QUERO UM BLOCO QUE MOSTRE: Olá mundo!"
 		],
 		"blocks": [
-			'print("Ana")',
+			'print("Miguel")',
             'print("Olá mundo!")'
 		],
 		"reward": Callable(self, "reward_notebook_1")

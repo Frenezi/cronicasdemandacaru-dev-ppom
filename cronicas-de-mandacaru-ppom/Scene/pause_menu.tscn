@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://c512w6vss5snx"]
+[gd_scene load_steps=6 format=3 uid="uid://c512w6vss5snx"]
 
 [ext_resource type="Theme" uid="uid://dansjc4v5110x" path="res://Themes/new_theme.tres" id="1_i3got"]
 [ext_resource type="Script" uid="uid://cr7lqny1ju0o0" path="res://pause_menu.gd" id="1_ur6gg"]
+[ext_resource type="FontFile" uid="uid://c3f2ygeg8eg8" path="res://fonts/CutePixel.ttf" id="3_52pyj"]
 
 [sub_resource type="InputEventAction" id="InputEventAction_ur6gg"]
 action = &"ui_cancel"
@@ -34,13 +35,23 @@ grow_vertical = 2
 [node name="continue_button" type="Button" parent="menu_holder"]
 layout_mode = 2
 theme = ExtResource("1_i3got")
+theme_override_fonts/font = ExtResource("3_52pyj")
 shortcut = SubResource("Shortcut_52pyj")
 text = "CONTINUAR"
+
+[node name="opcoes_button" type="Button" parent="menu_holder"]
+layout_mode = 2
+theme = ExtResource("1_i3got")
+theme_override_fonts/font = ExtResource("3_52pyj")
+shortcut = SubResource("Shortcut_52pyj")
+text = "OPÇÕES"
 
 [node name="quit_button" type="Button" parent="menu_holder"]
 layout_mode = 2
 theme = ExtResource("1_i3got")
+theme_override_fonts/font = ExtResource("3_52pyj")
 text = "SAIR"
 
 [connection signal="pressed" from="menu_holder/continue_button" to="." method="_on_continue_button_pressed"]
+[connection signal="pressed" from="menu_holder/opcoes_button" to="." method="_on_continue_button_pressed"]
 [connection signal="pressed" from="menu_holder/quit_button" to="." method="_on_quit_button_pressed"]
