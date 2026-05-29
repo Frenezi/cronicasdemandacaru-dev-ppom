@@ -20,19 +20,21 @@ var typing_speed = 0.05
 var typing_timer = 0.0
 
 var dialogs_before = [
-	"Olá, jovem! Sou Niede Guidon.",
-	"Passei anos estudando este parque...",
-	"Mas o conhecimento exige preparo!",
-	"Veja se voce entendeu o papiro.",
-	"Me responda sobre as pinturas!"
+	"Entao voce e o agente que a Agencia enviou...",
+	"Sou Niede Guidon. Estudei estas cavernas por anos.",
+	"Dinossauros surgiram aqui... mas nao sao violentos.",
+	"O problema sao os puzzles que eles criaram.",
+	"Precisamos entende-los para manter a paz.",
+	"Mas primeiro... prove que voce e capaz."
 ]
 
 var dialogs_after = [
-	"Excelente! Voce se saiu bem.",
-	"As pinturas tem mais de 25 mil anos.",
-	"Sao o maior acervo rupestre do mundo!",
-	"Continue sua jornada com cuidado.",
-	"A Serra da Capivara conta com você!"
+	"Voce conseguiu.",
+	"Os dinossauros criaram esses puzzles",
+	"Talvez para encontrar alguem inteligente.",
+	"Ha um dinossauro aqui... curioso e obcecado por puzzles.",
+	"Se ele confiar em voce, existe esperanca para todos nos.",
+	"Pode passar agora."
 ]
 
 var dialogs_repeat = [

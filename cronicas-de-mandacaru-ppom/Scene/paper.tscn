@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cj655tmrv5p38"]
 
-[ext_resource type="Texture2D" uid="uid://b3gtbvpavlcqo" path="res://Sprites/dica.png" id="1_k1jeu"]
+[ext_resource type="Texture2D" uid="uid://b3gtbvpavlcqo" path="res://Sprites/papiros/dica.png" id="1_k1jeu"]
 [ext_resource type="Script" uid="uid://dq0co62mskmvr" path="res://Script/item.gd" id="1_qykhk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_75jr1"]

@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://d4kamcfp1nd7t"]
+[gd_scene load_steps=5 format=3 uid="uid://d4kamcfp1nd7t"]
 
 [ext_resource type="Script" uid="uid://dtsykmitpj10t" path="res://Script/ending.gd" id="1_r32qv"]
 [ext_resource type="FontFile" uid="uid://cg7nmsrpxuvmx" path="res://fonts/determination.ttf" id="2_w5gfw"]
+[ext_resource type="Texture2D" uid="uid://dfxfsjjdj1nvr" path="res://cutscene/ending.jpg" id="3_w5gfw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r32qv"]
 
@@ -22,26 +23,29 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -88.0
-offset_top = -37.5
-offset_right = 88.0
-offset_bottom = 37.5
+offset_left = -199.0
+offset_top = 76.0
+offset_right = 104.0
+offset_bottom = 151.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(1, 0.17000002, 0.17000002, 1)
+theme_override_colors/font_color = Color(1.2513996e-06, 0.6162498, 0.7393551, 1)
 theme_override_fonts/font = ExtResource("2_w5gfw")
-text = "OBRIGADO POR JOGAR
-NOSSA DEMO!
-"
+text = "PARABÉNS, VOCÊ ZEROU A DEMONSTRAÇÃO"
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -8.0
+offset_top = -15.000001
+offset_right = 1626.9998
+offset_bottom = 899.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 1)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_w5gfw")
 
 [node name="BackToMenu" type="Button" parent="."]
 layout_mode = 1
@@ -51,7 +55,8 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -130.0
-offset_top = -31.0
+offset_top = -209.0
+offset_bottom = -178.0
 grow_horizontal = 0
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("2_w5gfw")

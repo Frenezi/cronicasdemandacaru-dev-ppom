@@ -24,7 +24,6 @@ func _read():
 	iniciar()
 
 func _ready() -> void:
-	$"Opções_menu".visible = false
 	for button in get_tree().get_nodes_in_group("button"):
 		button.connect("pressed", Callable(self, "on_button_pressed").bind(button))
 		button.connect("mouse_entered", Callable(self, "mouse_interaction").bind(button, "entered"))

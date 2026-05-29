@@ -23,5 +23,7 @@ func _on_mutar_toggled(ativado):
 	AudioServer.set_bus_mute(AudioServer.get_bus_index("Master"), ativado)
 
 func _on_voltar():
+	print("pai: ", get_parent().name)
+	for child in get_parent().get_children():
+		print("filho: ", child.name)
 	queue_free()
-	get_parent().menu_holder.visible = true

@@ -3,8 +3,9 @@ extends Node
 # ─── FLAGS DE ITENS COLETADOS ──────────────────────────────────────────────────
 
 var collected_items = {
-	"notebook_1_paper": false,   # papel do puzzle da fase principal
-	"tutorial_niede_paper": false # papel do puzzle da Niede no tutorial
+	"paper_1": false,
+	"tutorial_niede_paper": false,
+	"paper_2" : false 
 }
 
 # ─── CONTEÚDO DE REFERÊNCIA ────────────────────────────────────────────────────

@@ -20,7 +20,7 @@ func _on_body_entered(body: Node2D) -> void:
 	body.blocked = true
 	await get_tree().create_timer(0.1).timeout
 	body.blocked = false
-	get_tree().change_scene_to_file("res://Scene/Serra.tscn")
+	get_tree().change_scene_to_file("res://Scene/Serra Backup.tscn")
 
 func _show_message(text: String, player: Node2D):
 	# evita duplicar se já tiver uma mensagem aparecendo

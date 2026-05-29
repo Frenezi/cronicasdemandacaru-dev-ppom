@@ -1,18 +1,16 @@
 extends CanvasLayer
 
+@export var screen_id: String = "variaveis"  # ← define no Inspector de cada um
+
 @onready var papiro = $layer
 @onready var anim = $AnimationPlayer
 
-var current_id: String = ""
-var papiros = {
-	"pinturas": preload("res://dicas/pinturas.png"),
-	"variaveis": preload("res://dicas/variaveis.png"),
-	"saida": preload("res://dicas/saida.png")
-}
+var was_paused: bool = false
 
 func _ready():
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	add_to_group("reference_screen")
+	add_to_group("ref_" + screen_id)  # ← grupo único ex: "ref_variaveis"
 	papiro.visible = false
 
 func _input(event):
@@ -23,21 +21,16 @@ func _input(event):
 	if event.is_action_pressed("cancel"):
 		_close()
 
-func open(reference_id: String):
-	current_id = reference_id
-	var texture = papiros.get(reference_id, null)
-	if texture == null:
-		return
-	papiro.texture = texture
+func open():
+	was_paused = get_tree().paused
 	papiro.visible = true
 	anim.play("abrindo")
 	get_tree().paused = true
 
 func reopen():
-	if current_id != "":
-		open(current_id)
+	open()
 
 func _close():
 	papiro.visible = false
-	if get_tree().get_first_node_in_group("puzzle_layer") == null:
+	if not was_paused:
 		get_tree().paused = false

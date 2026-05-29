@@ -35,27 +35,27 @@ func _physics_process(_delta):
 		if puzzle_screen.modulate.a <= 0:
 			puzzle_screen.modulate.a = 0
 			queue_free()
+var puzzle_reference_id: String = ""  # ← move pro topo do script
+
 func setup(question: String, answers: Array, blocks: Array, reference_id: String, callback: Callable):
 	callback_when_done = callback
 	question_label.text = question
 
-	slot1.expected_answer = blocks[0]  # ← era answers[0]
-	slot2.expected_answer = blocks[1]  # ← era answers[1]
+	slot1.expected_answer = blocks[0]
+	slot2.expected_answer = blocks[1]
 
-	slot1.get_node("VBoxContainer/Label").text = answers[0]  # descrição continua igual
+	slot1.get_node("VBoxContainer/Label").text = answers[0]
 	slot2.get_node("VBoxContainer/Label").text = answers[1]
 
 	slot1.get_node("VBoxContainer/DropArea/Label").text = "Arraste o bloco \n aqui"
 	slot1.get_node("VBoxContainer/DropArea/Label").visible = true
-	slot2.get_node("VBoxContainer/DropArea/Label").text = "Arraste o bloco \n aqui "
+	slot2.get_node("VBoxContainer/DropArea/Label").text = "Arraste o bloco \n aqui"
 	slot2.get_node("VBoxContainer/DropArea/Label").visible = true
-	
+
 	bloco1.get_node("Label").text = blocks[0]
 	bloco2.get_node("Label").text = blocks[1]
 
-	var ref_screen = get_tree().get_first_node_in_group("reference_screen")
-	if ref_screen:
-		ref_screen.current_id = reference_id
+	puzzle_reference_id = reference_id  # ← só isso, sem buscar ref_screen aqui
 
 	error_label.visible = false
 	_update_button()
@@ -130,9 +130,13 @@ func hide_bloco(block_text: String):
 	elif bloco2.get_node("Label").text == block_text:
 		bloco2.visible = false
 
+
+
+
 func _open_reference():
-	var ref_screen = get_tree().get_first_node_in_group("reference_screen")
-	ref_screen.open("dica_1")
+	var ref_screen = get_tree().get_first_node_in_group("ref_" + puzzle_reference_id)
+	if ref_screen:
+		ref_screen.reopen()
 func fade_in():
 	var tw = create_tween()
 	tw.tween_property(puzzle_screen, "modulate:a", 0.8, 0.7)

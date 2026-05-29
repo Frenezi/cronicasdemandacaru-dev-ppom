@@ -18,18 +18,24 @@ var typing_speed = 0.05
 var typing_timer = 0.0
 
 var dialogs_before = [
-	"Como voce chegou aqui!?",
-	"Não lembro abrir a porta...",
-	"Se voce for um dos funcionários",
-	"Conseguirá responder essa pergunta!",
-	"(Eu devo estar ficando meio velho...)"
+	"O problema nao sou eu. Nunca foi.",
+	"Existo porque...",
+	"Alguem achou mais facil ignorar do que resolver.",
+	"Mas voce esta aqui.",
+	"Isso significa que voce entende.",
+	"Resolva o que esta na minha frente.",
+	"Arraste os blocos para os lugares certos.",
+	"Se entender isso... entende tudo."
 ]
 
 var dialogs_after = [
-	"Muito inteligente voce",
-	"Acho que nem eu conseguiria responder...",
-	"Cof.. Cof...",
-	"Muito bem, sinta-se em casa"
+	"Eu precisava admitir algo.",
+	"Anos aqui dentro. Reclamando. Esperando.",
+	"Poluir e errado. Eu sempre soube.",
+	"Mas ficar em silencio tambem e.",
+	"Voce usou o codigo pra dizer o que eu nao tive coragem.",
+	"Obrigado por isso.",
+	"Agora va. E nao ignore o que aprendeu aqui."
 ]
 
 var dialogs_repeat = [
@@ -77,13 +83,13 @@ func _process(_delta):
 				advance_dialog()
 
 func _check_and_start_dialog():
-	if not ReferenceGlobal.collected_items["notebook_1_paper"]:
+	if not ReferenceGlobal.collected_items["paper_2"]:
 		dialog_active = true
 		no_paper_dialog = true  # ← essa linha tá faltando!
 		interact_hint.visible = false
 		dialog_bubble.visible = true
 		get_tree().paused = true
-		show_dialog("Ei! Antes de começar, vai lá pegar o papel que deixei na mesa.")
+		show_dialog("Hm, voce nao é digno, volte depois...")
 		return
 	# tem papel — fluxo normal
 	start_dialog()
@@ -170,6 +176,7 @@ func end_dialog():
 	dialog_bubble.visible = false
 	dialog_active = false
 	get_tree().paused = false
+	get_tree().change_scene_to_file("res://Scene/ending.tscn")
 
 func end_dialog_repeat():
 	dialog_bubble.visible = false

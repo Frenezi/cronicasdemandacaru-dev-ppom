@@ -16,7 +16,7 @@ func _ready():
 
 func _input(event):
 	if event is InputEventKey and event.pressed:
-		if event.keycode == KEY_E:
+		if event.keycode == KEY_Q:
 			if menu_aberto:
 				fechar_menu()
 			else:
@@ -39,7 +39,7 @@ func _on_continue_pressed():
 
 func _on_opcs_pressed():
 	menu_holder.visible = false
-	var opcs = load("res://Scene/menu_opcs.tscn").instantiate()
+	var opcs = load("res://Scene/opções_menu.tscn").instantiate()
 	add_child(opcs)
 	opcs.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	var tamanho = get_viewport().get_visible_rect().size

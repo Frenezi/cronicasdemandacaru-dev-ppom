@@ -14,9 +14,9 @@ func _on_area_body_entered(body):
 func _collect():
 	collected = true
 	ReferenceGlobal.collected_items[item_flag] = true
-	var ref_screen = get_tree().get_first_node_in_group("reference_screen")
+	var ref_screen = get_tree().get_first_node_in_group("ref_" + reference_id)
 	if ref_screen:
-		ref_screen.open(reference_id)  # ← usa o export em vez de hardcoded
+		ref_screen.open()
 	self.visible = false
 
 func _start_float_tween():

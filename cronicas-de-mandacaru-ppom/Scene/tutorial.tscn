@@ -1,7 +1,7 @@
 [gd_scene load_steps=20 format=4 uid="uid://boye3up5msv5"]
 
 [ext_resource type="PackedScene" uid="uid://bf72x7xnrbxik" path="res://entities/camera.tscn" id="1_b53jw"]
-[ext_resource type="PackedScene" path="res://niede_puzzle.tscn" id="1_r3him"]
+[ext_resource type="PackedScene" uid="uid://qjcttsdnvmqe" path="res://entities/niede_puzzle.tscn" id="1_r3him"]
 [ext_resource type="PackedScene" uid="uid://tsvnbubb6bg4" path="res://entities/player.tscn" id="2_4cpsy"]
 [ext_resource type="TileSet" uid="uid://dk1qfi3hmp7p8" path="res://Tiles/terrain.tres" id="3_qwkqa"]
 [ext_resource type="TileSet" uid="uid://bu2o7rwp824ui" path="res://Tiles/decoration.tres" id="4_aqehm"]
@@ -50,7 +50,6 @@ limit_bottom = 247
 [node name="Player" parent="." instance=ExtResource("2_4cpsy")]
 position = Vector2(23, -3)
 collision_mask = 137
-MAX_SPEED = 100.0
 acceleration = 5000.0
 deceleration = 50000.0
 
@@ -160,14 +159,14 @@ item_flag = "tutorial_niede_paper"
 
 [node name="CanvasLayer" parent="." instance=ExtResource("11_veuv8")]
 layer = 3
+screen_id = "pinturas"
 
-[node name="dica" parent="CanvasLayer/papiro_holder" index="2"]
-z_index = 7
-offset_left = -329.87015
-offset_top = 417.89612
-offset_right = 924.1299
-offset_bottom = 1671.8961
-scale = Vector2(0.22, 0.22)
+[node name="dica" parent="CanvasLayer/layer" index="0"]
+offset_left = -357.14285
+offset_top = 411.4026
+offset_right = 1151.8245
+offset_bottom = 1745.7982
+scale = Vector2(0.21, 0.21)
 texture = ExtResource("13_mvu6f")
 
 [editable path="niede_puzzle"]

@@ -13,17 +13,13 @@ var typing_speed = 0.05
 var typing_timer = 0.0
 
 var dialogs = [
-	"Olá tamanduázinho",
-	"Encontrei algumas dicas",
-	"Um dinossauro travesso pode abrir aqui",
-	"Mas ele fará uma pergunta difícil",
-	"Procure um papel de dica",
-	"Vai te ajudar a responder!",
+	"Olá Mandacaru",
+	"Acho que aqui tem um chefe",
+	"Pegue a dica e tente falar com ele"
 ]
 
 var dialogs_repeat = [
-	"Me encontre lá na caverna",
-    "Acho que vou ter novas pistas..."
+	"Explore a caverna"
 ]
 
 @onready var interact_hint = $InteractHint

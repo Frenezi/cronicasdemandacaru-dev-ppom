@@ -6,6 +6,7 @@ extends Node
  
 func reward_notebook_1():
 	print("Player ganhou buff: +10 HP!")
+	get_tree().change_scene_to_file("res://Scene/ending.tscn")
  
 func reward_notebook_2():
 	var player = get_tree().get_first_node_in_group("player")
@@ -34,25 +35,25 @@ var puzzles = {
 	"notebook_1": {
 		"question": "Print, um comando de saída!",
 		"slot_labels": [
-			"--> EU QUERO UM BLOCO QUE MOSTRE: Bruno",
+			"--> EU QUERO UM BLOCO QUE MOSTRE: Miguel",
 			"--> EU QUERO UM BLOCO QUE MOSTRE: Olá mundo!"
 		],
 		"blocks": [
-			'print("Bruno")',
+			'print("Miguel")',
 			'print("Olá mundo!")'
 		],
-		"reference_id": "variaveis",
+		"reference_id": "saida",
 		"reward": Callable(self, "reward_notebook_1")
 	},
 	"notebook_2": {
 		"question": "Variáveis, caixas que guardam tudo!",
 		"slot_labels": [
 			"--> EU QUERO UM BLOCO EM QUE X RECEBE 15",
-			"--> EU QUERO UM BLOCO EM QUE X RECEBE: \"Bruno\""
+			"--> EU QUERO UM BLOCO EM QUE X RECEBE: \"Ana\""
 		],
 		"blocks": [
 			'X = 15',
-			'X = "Bruno"'
+			'X = "Ana"'
 		],
 		"reference_id": "variaveis",
 		"reward": Callable(self, "reward_notebook_2")

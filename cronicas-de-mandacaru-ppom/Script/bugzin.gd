@@ -18,19 +18,22 @@ var typing_speed = 0.05  # tempo entre cada letra em segundos
 var typing_timer = 0.0
 
 var dialogs_before = [
-	"Voce nao parece ser daqui...",
-	"VOCE DEVE SER O INVASOR!!!!!",
-	"Veremos se é esperto mesmo...",
-	"Sabe responder uma pergunta...",
-	"EM PYTHON!?"
+	"Entao foi voce que resolveu o puzzle...",
+	"Meu nome e Bugzin. Cuido dos puzzles daqui.",
+	"Preciso de ajuda. Meu chefe... o Arquiteto.",
+	"Ele criou um puzzle. O ultimo.",
+	"Nao e logica nem forca. E um espelho.",
+	"Ele quer que alguem prove que ele esta errado.",
+	"Se voce ganhar a confianca dele... ele para com tudo.",
+	"Mas primeiro preciso saber se voce e capaz."
 ]
 
 var dialogs_after = [
-	"Voce é bom mesmo hein...",
-	"Me escute",
-	"Verá uma porta aberta a frente",
-	"Duvido que ganhe meu chefe!",
-	"Ops! Acho que falei demais."
+	"Hm. Voce... nao foi ruim.",
+	"Foi bom. Ta? Foi bom.",
+	"Nao conta pra ninguem que eu disse isso.",
+	"Meu chefe vai ficar satisfeito. Bom trabalho.",
+	"Vá para a direita e suba nas plataformas"
 ]
 
 var dialogs_repeat = [
@@ -78,7 +81,7 @@ func _process(_delta):
 				advance_dialog()
 
 func _check_and_start_dialog():
-	if not ReferenceGlobal.collected_items["notebook_1_paper"]:
+	if not ReferenceGlobal.collected_items["paper_1"]:
 		dialog_active = true
 		no_paper_dialog = true  # ← essa linha tá faltando!
 		interact_hint.visible = false

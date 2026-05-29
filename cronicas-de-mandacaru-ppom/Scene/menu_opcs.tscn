@@ -9,10 +9,24 @@ process_mode = 3
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.1060001
-offset_left = -143.0
-offset_top = 42.0
-offset_right = -143.0
-offset_bottom = 20.95198
+offset_left = 1.0
+offset_top = -5.0
+offset_right = 1.0
+offset_bottom = -26.04802
+
+[node name="ColorRect" parent="Opções_menu" index="0"]
+color = Color(0.2176, 0.25514668, 0.32, 1)
+
+[node name="Label" parent="Opções_menu/VBoxContainer" index="0"]
+text = "OPÇÕES DE AUDIO"
+horizontal_alignment = 0
+
+[node name="Label3" parent="Opções_menu/VBoxContainer" index="1"]
+text = ""
+horizontal_alignment = 0
+
+[node name="HSlider" parent="Opções_menu/VBoxContainer/HBoxContainer2" index="1"]
+custom_minimum_size = Vector2(230, 30)
 
 [node name="BG_overlay" type="ColorRect" parent="."]
 anchors_preset = 15
@@ -21,3 +35,5 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.25490198)
+
+[editable path="Opções_menu"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3gtbvpavlcqo"
-path="res://.godot/imported/dica.png-b354f6c8373508160996c25cd6cf7c2a.ctex"
+uid="uid://dfxfsjjdj1nvr"
+path="res://.godot/imported/ending.jpg-6af5135875f1371b726f2fb2e46422b7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/dica.png"
-dest_files=["res://.godot/imported/dica.png-b354f6c8373508160996c25cd6cf7c2a.ctex"]
+source_file="res://cutscene/ending.jpg"
+dest_files=["res://.godot/imported/ending.jpg-6af5135875f1371b726f2fb2e46422b7.ctex"]
 
 [params]
 

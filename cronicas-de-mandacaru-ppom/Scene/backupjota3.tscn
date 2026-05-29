@@ -1,5 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://btvmaivoj3nqc"]
-
-[ext_resource type="PackedScene" uid="uid://c512w6vss5snx" path="res://Scene/pause_menu.tscn" id="1_ru3dd"]
-
-[node name="Pause_menu" instance=ExtResource("1_ru3dd")]

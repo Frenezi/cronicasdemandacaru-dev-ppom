@@ -1,11 +1,11 @@
 extends Control
 
 const SCENE_DATA = [
-	{"path": "res://cutscene/cutscene_t1.png", "text": "Era uma noite tranquila para Mandacaru o Tatu-bandeira descansava sem imaginar o que estava por vir..."},
-	{"path": "res://cutscene/cutscene_t2.png", "text": "Um alerta da ACT(Agência de Correção de Bugs). Mandacaru recebeu uma missão: investigar uma série de bugs críticos reportados no Parque Nacional da Serra da Capivara."},
-	{"path": "res://cutscene/cutscene_t3.png", "text": "Mandacaru chegou ao parque sob a lua crescente. O lugar parecia normal... mas algo estava errado."},
-	{"path": "res://cutscene/cutscene_t4.png", "text": "Criaturas impossíveis emergiram das rochas, os bugs haviam corrompido a própria realidade do parque. Mandacaru ficou paralisado de medo."},
-	{"path": "res://cutscene/cutscene_t5.png", "text": "Distraído pelas silhuetas das criaturas, Mandacaru escorregou e caiu numa caverna escura. Lá embaixo... a missão havia apenas começado."}
+{"path": "res://cutscene/cutscene_t1.png", "text": "Era uma noite tranquila... Mandacaru, o Tamandua-bandeira, descansava sem imaginar o que estava por vir."},
+{"path": "res://cutscene/cutscene_t2.png", "text": "Um alerta da ACT - Agencia de Correcao de Bugs. Mandacaru recebeu uma missao: investigar bugs criticos no Parque Nacional da Serra da Capivara."},
+{"path": "res://cutscene/cutscene_t3.png", "text": "Mandacaru chegou ao parque sob a lua crescente. O lugar parecia normal... mas algo estava errado."},
+{"path": "res://cutscene/cutscene_t4.png", "text": "Criaturas impossiveis emergiram das rochas. Os bugs haviam corrompido a realidade do parque. Mandacaru ficou paralisado de medo."},
+{"path": "res://cutscene/cutscene_t5.png", "text": "Distraido pelas silhuetas das criaturas, Mandacaru escorregou e caiu numa caverna escura. La embaixo... a missao havia apenas comecado."},
 ]
 
 @onready var cutscene_image = $CutsceneFrame/TextureRect

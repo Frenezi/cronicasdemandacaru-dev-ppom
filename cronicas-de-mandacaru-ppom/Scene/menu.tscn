@@ -1,11 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://ceurjiyfeljuy"]
+[gd_scene load_steps=8 format=3 uid="uid://ceurjiyfeljuy"]
 
 [ext_resource type="Script" uid="uid://bncnklakyl3hv" path="res://Script/menu.gd" id="1_eas8t"]
 [ext_resource type="Texture2D" uid="uid://6q1o24nytfbo" path="res://images/WhatsApp Image 2026-05-27 at 19.48.40.jpeg" id="2_ffxp3"]
 [ext_resource type="FontFile" uid="uid://cg7nmsrpxuvmx" path="res://fonts/determination.ttf" id="2_u2k45"]
 [ext_resource type="AudioStream" uid="uid://conbn8dvysn6b" path="res://SFX/Nascence - Austin Wintory.mp3" id="6_6hgn1"]
 [ext_resource type="Texture2D" uid="uid://cqmx2wjb757nt" path="res://Sprites/BACKGROUNDS/logo.png" id="37_xv7ii"]
-[ext_resource type="PackedScene" uid="uid://dqofr4iqw8kuv" path="res://Scene/opções_menu.tscn" id="38_xv7ii"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7x646"]
 
@@ -61,14 +60,6 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_45on0")
 text = "PLAY"
 flat = true
 
-[node name="Menu" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer" groups=["button"]]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("2_u2k45")
-theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_7x646")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_45on0")
-text = "MENU"
-flat = true
-
 [node name="Sair" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer" groups=["button"]]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_u2k45")
@@ -85,10 +76,6 @@ offset_right = 385.44772
 offset_bottom = 74.0
 texture = ExtResource("37_xv7ii")
 expand_mode = 3
-
-[node name="Opções_menu" parent="." instance=ExtResource("38_xv7ii")]
-visible = false
-layout_mode = 1
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_6hgn1")
