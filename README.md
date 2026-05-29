@@ -66,6 +66,10 @@ cronicasdemandacaru-dev-ppom/
 
 ---
 
+## Nosso site
+
+- [Crônicas de Mandacaru](https://osvaldoneto-mandacaru.github.io/mandacaru_site/)
+
 ## Contribuição
 
 Contribuições são bem-vindas! Para contribuir:
